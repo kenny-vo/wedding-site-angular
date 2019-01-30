@@ -43,18 +43,6 @@ function handleError(res, reason, message, code) {
  */
 
 app.get("/api/contacts", function(req, res) {
-});
-
-app.post("/api/contacts", function(req, res) {
-});
-
-/*  "/api/contacts/:id"
- *    GET: find contact by id
- *    PUT: update contact by id
- *    DELETE: deletes contact by id
- */
-
-app.get("/api/contacts", function(req, res) {
   db.collection(CONTACTS_COLLECTION).find({}).toArray(function(err, docs) {
     if (err) {
       handleError(res, err.message, "Failed to get contacts.");
@@ -80,5 +68,18 @@ app.post("/api/contacts", function(req, res) {
     });
   }
 });
+
+/*  "/api/contacts/:id"
+ *    GET: find contact by id
+ *    PUT: update contact by id
+ *    DELETE: deletes contact by id
+ */
+
+app.get("/api/contacts/:id", function(req, res) {
+});
+
+app.put("/api/contacts/:id", function(req, res) {
+});
+
 app.delete("/api/contacts/:id", function(req, res) {
 });
