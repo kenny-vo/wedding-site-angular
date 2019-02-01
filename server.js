@@ -15,13 +15,11 @@ app.use(function(req, res, next) {
   next();
 });
 
-
 var CONTACTS_COLLECTION = "contacts";
 
 var app = express();
 app.use(bodyParser.json());
 app.use(express.static('public'));
-
 
 // Create link to Angular build directory
 var distDir = __dirname + "/dist/";
