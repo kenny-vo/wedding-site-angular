@@ -1,5 +1,7 @@
-import { Component, HostListener, Inject } from '@angular/core';
+import { Component, HostListener, Inject, Injectable } from '@angular/core';
 import { DOCUMENT } from "@angular/platform-browser";
+import { Person, SearchService } from './shared';
+
 
 @Component({
   selector: 'app-root',
@@ -8,8 +10,12 @@ import { DOCUMENT } from "@angular/platform-browser";
 })
 export class AppComponent {
 
-  constructor(@Inject(DOCUMENT) private document: Document) { }
+  query: string;
+  searchResults: Array<Person>;
 
+  constructor(@Inject(DOCUMENT) private document: Document, private searchService: SearchService) { }
+  
+  
   @HostListener('window:scroll', [])
   onWindowScroll() {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {      
@@ -20,4 +26,15 @@ export class AppComponent {
 
   }
   name = 'Angular';
+  
+  search(): void {
+    this.searchService.search(this.query).subscribe(
+      (data: any) => { this.searchResults = data; },
+      error => console.log(error)
+    );
+  }
+  
 }
+
+
+
