@@ -40,8 +40,8 @@ export class ContactListComponent implements OnInit {
   }
 
   selectContact(contact: Contact) {
-    console.log(contact);
     this.selectedContact = contact
+    console.log(this.selectedContact)
   }
 
   createNewContact() {
@@ -73,14 +73,14 @@ export class ContactListComponent implements OnInit {
     return this.contacts;
   }
 
-  updateContact = (contact: Contact) => {
-    console.log(contact);
+  updateContact = (selectedContact: Contact) => {
+    console.log(selectedContact);
 
-    var idx = this.getIndexOfContact(contact._id);
+    var idx = this.getIndexOfContact(selectedContact._id);
     if (idx !== -1) {
-      this.contacts[idx] = contact;
-      this.selectContact(contact);
-      console.log(contact)
+      this.contacts[idx] = selectedContact;
+      this.selectContact(selectedContact);
+      console.log(selectedContact)
     }
     return this.contacts;
   }
