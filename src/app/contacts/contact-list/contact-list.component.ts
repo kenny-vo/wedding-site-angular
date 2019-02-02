@@ -41,7 +41,6 @@ export class ContactListComponent implements OnInit {
 
   selectContact(contact: Contact) {
     this.selectedContact = contact
-    console.log(this.selectedContact)
   }
 
   createNewContact() {
@@ -73,14 +72,13 @@ export class ContactListComponent implements OnInit {
     return this.contacts;
   }
 
-  updateContact = (selectedContact: Contact) => {
-    console.log(selectedContact);
-
-    var idx = this.getIndexOfContact(selectedContact._id);
+  updateContact = (contact: Contact) => {
+    console.log(this.selectedContact);
+    var idx = this.getIndexOfContact(contact._id);
     if (idx !== -1) {
-      this.contacts[idx] = selectedContact;
-      this.selectContact(selectedContact);
-      console.log(selectedContact)
+      this.contacts[idx] = contact;
+      this.selectContact(contact);
+      console.log(contact)
     }
     return this.contacts;
   }
