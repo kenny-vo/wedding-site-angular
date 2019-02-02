@@ -58,6 +58,7 @@ export class ContactListComponent implements OnInit {
   }
 
   deleteContact = (contactId: String) => {
+    console.log(contactId);
     var idx = this.getIndexOfContact(contactId);
     if (idx !== -1) {
       this.contacts.splice(idx, 1);
@@ -73,13 +74,10 @@ export class ContactListComponent implements OnInit {
   }
 
   updateContact = (contact: Contact, contactId: String) => {
-    console.log(contact);
-    console.log(contactId);
     var idx = this.getIndexOfContact(contactId);
     if (idx !== -1) {
       this.contacts[idx] = contact;
       this.selectContact(contact);
-      console.log(contact)
     }
     return this.contacts;
   }

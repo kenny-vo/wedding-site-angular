@@ -27,7 +27,7 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://localhost:2701
   console.log("Database connection ready");
 
   // Initialize the app.
-  var server = app.listen(process.env.PORT || 8080, function () {
+  var server = app.listen(process.env.PORT || 8000, function () {
     var port = server.address().port;
     console.log("App now running on port", port);
   });
@@ -92,8 +92,9 @@ app.get("/api/contacts/:id", function(req, res) {
 app.put("/api/contacts/:id", function(req, res) {
   var updateDoc = req.body;
   delete updateDoc._id;
+  var newValues = { $set: updateDoc};
 
-  db.collection(CONTACTS_COLLECTION).updateOne({_id: new ObjectID(req.params.id)}, updateDoc, function(err, doc) {
+  db.collection(CONTACTS_COLLECTION).updateOne({_id: new ObjectID(req.params.id)}, newValues, function(err, doc) {
     if (err) {
       handleError(res, err.message, "Failed to update contact");
     } else {
