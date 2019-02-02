@@ -72,9 +72,9 @@ export class ContactListComponent implements OnInit {
     return this.contacts;
   }
 
-  updateContact = (contact: Contact) => {
-    console.log(this.selectedContact);
-    var idx = this.getIndexOfContact(this.selectedContact._id);
+  updateContact = (contact: Contact, contactId: String) => {
+    
+    var idx = this.getIndexOfContact(contactId);
     if (idx !== -1) {
       this.contacts[idx] = contact;
       this.selectContact(contact);
