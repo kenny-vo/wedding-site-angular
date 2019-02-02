@@ -16,12 +16,13 @@ export class ContactListComponent implements OnInit {
   selectedContact: Contact
   public searchText : string;
   fullList: number;
+  rsvp_sent: number;
 
   constructor(private contactService: ContactService) { }
 
   ngOnInit() {
-
     this.fullList = 0;
+    this.rsvp_sent = 0;
     this.contactService.getContacts().then((contacts: Contact[]) => {
       this.contacts = contacts.map((contact) => {
         return contact;
@@ -47,6 +48,7 @@ export class ContactListComponent implements OnInit {
   selectContact(contact: Contact) {
     this.selectedContact = contact;
     this.searchText = undefined;
+
   }
 
   createNewContact() {
@@ -89,6 +91,7 @@ export class ContactListComponent implements OnInit {
     }
     this.fullList = 0;
     this.selectedContact = null;
+    this.rsvp_sent = 1;
     console.log('thanks for the RSVP!')
     return this.contacts;
   }

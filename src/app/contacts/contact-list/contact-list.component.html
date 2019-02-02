@@ -1,17 +1,18 @@
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
+    <h2 *ngIf="rsvp_sent == 1" class="rsvp-thanks fade-in one">Thank you for responding!</h2>
       <input class="search-box" [(ngModel)]="searchText" placeholder="Search for your name" (click)="hideList()" (keydown.enter)="unHideList()">
       <input type="submit" class="button" value="Search" (click)="unHideList()">
     <div *ngIf="fullList == 1 && searchText !== undefined">
-      <ul class="list-group">
-          <li class="list-group-item" 
+      <ul class="list-group" *ngIf="searchText.length > 2">
+        <li class="list-group-item" 
           *ngFor="let contact of contacts | grdFilter: {name: searchText, email: searchText} ; let i=index;"
           (click)="selectContact(contact)"
-          [class.active]="contact === selectedContact">
+          [class.active]="contact === selectedContact" >
             {{contact.name}}
-        </li>
+        </li >
       </ul>
-      <!-- <button class="btn btn-warning" (click)="createNewContact()">New</button> -->
+      <button class="button" (click)="createNewContact()">Add New Entry</button>
     </div>
   </div>
   <div class="row" *ngIf="fullList == 1">
