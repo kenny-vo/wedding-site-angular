@@ -74,7 +74,7 @@ export class ContactListComponent implements OnInit {
 
   updateContact = (contact: Contact) => {
     console.log(this.selectedContact);
-    var idx = this.getIndexOfContact(contact._id);
+    var idx = this.getIndexOfContact(this.selectedContact._id);
     if (idx !== -1) {
       this.contacts[idx] = contact;
       this.selectContact(contact);
