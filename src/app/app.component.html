@@ -25,60 +25,13 @@
     </div>
   </div>
 </nav>
-<!-- test -->
-<section class="home-info-section" id="info">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 text-center home-info">
-        <button class="rsvp-button btn-primary" data-toggle="modal" data-target="#rsvpModal">RSVP</button>
-        <!-- RSVP Modal -->
-        <div class="modal fade" id="rsvpModal1" tabindex="-1" role="dialog" aria-labelledby="RSVP Modal">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">RSVP here</h4>
-              </div>
-              <div class="modal-body">
-
-                <h2>Search</h2>
-                <form>
-                  <input type="search" name="query" [(ngModel)]="query" (keyup.enter)="search()">
-                  <button type="button" (click)="search()">Search</button>
-                  <table *ngIf="searchResults">
-                    <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Phone</th>
-                      <th>Address</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr *ngFor="let person of searchResults; let i=index">
-                      <td>{{person.name}}</td>
-                      <td>{{person.phone}}</td>
-                      <td>{{person.address.street}}<br/>
-                        {{person.address.city}}, {{person.address.state}} {{person.address.zip}}
-                      </td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <!-- Main Landing-->
-<!-- <section class="parallax main-landing">
+<section class="parallax main-landing">
   <div class="main-landing-content">
     <h1 class="fade-in one"> shan <br/> & <br/> kenny</h1>
     <h3 class="fade-in two">10. 18. 19</h3>
   </div>
-</section> -->
+</section>
 <!-- Home Info -->
 <section class="home-info-section" id="info">
   <div class="container">
@@ -90,7 +43,7 @@
         <p>
           <a href="https://www.wildflower.org/visit">Lady Bird Johnson Wildflower Center</a> <br/> 4801 La Crosse Avenue<br/> Austin, Texas
         </p>
-        <button class="rsvp-button btn-primary" data-toggle="modal" data-target="#rsvpModal1">RSVP</button>
+        <button class="rsvp-button btn-primary" data-toggle="modal" data-target="#rsvpModal">RSVP</button>
         <!-- RSVP Modal -->
         <div class="modal fade" id="rsvpModal" tabindex="-1" role="dialog" aria-labelledby="RSVP Modal">
           <div class="modal-dialog" role="document">
