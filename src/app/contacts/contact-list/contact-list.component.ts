@@ -14,24 +14,20 @@ export class ContactListComponent implements OnInit {
 
   contacts: Contact[]
   selectedContact: Contact
+  public searchText : string;
+  fullList: number;
 
   constructor(private contactService: ContactService) { }
 
   ngOnInit() {
-    this.contactService
-     .getContacts()
-     .then((contacts: Contact[]) => {
-       this.contacts = contacts.map((contact) => {
-         if (!contact.phone) {
-           contact.phone = {
-             mobile: '',
-             work: ''
-           }
-         }
-         return contact;
-       });
-     });
- }
+
+    this.fullList = 0;
+    this.contactService.getContacts().then((contacts: Contact[]) => {
+      this.contacts = contacts.map((contact) => {
+        return contact;
+      });
+    });
+  }
 
   private getIndexOfContact = (contactId: String) => {
     return this.contacts.findIndex((contact) => {
@@ -39,18 +35,30 @@ export class ContactListComponent implements OnInit {
     });
   }
 
+  hideList() {
+    this.fullList = 0;
+  }
+
+  unHideList() {
+    this.fullList = 1;
+    this.selectedContact = null;
+  }
+
   selectContact(contact: Contact) {
-    this.selectedContact = contact
+    this.selectedContact = contact;
+    this.searchText = undefined;
   }
 
   createNewContact() {
     var contact: Contact = {
       name: '',
+      rsvp: '',
       email: '',
-      phone: {
-        work: '',
-        mobile: ''
-      }
+      guests: 0,
+      allowed_guests: 0,
+      guest_name: '',
+      dietary: '',
+      comment: ''
     };
 
     // By default, a newly-created contact will have the selected state.
@@ -79,6 +87,9 @@ export class ContactListComponent implements OnInit {
       this.contacts[idx] = contact;
       this.selectContact(contact);
     }
+    this.fullList = 0;
+    this.selectedContact = null;
+    console.log('thanks for the RSVP!')
     return this.contacts;
   }
 }

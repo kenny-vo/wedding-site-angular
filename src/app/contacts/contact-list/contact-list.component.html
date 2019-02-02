@@ -1,18 +1,21 @@
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <h2>Contacts</h2>
-    <ul class="list-group">
-      <li class="list-group-item"
-        *ngFor="let contact of contacts"
-        (click)="selectContact(contact)"
-        [class.active]="contact === selectedContact">
-        {{contact.name}}
-      </li>
-    </ul>
-    <button class="btn btn-warning" (click)="createNewContact()">New</button>
+  <div class="col-md-8 col-md-offset-2">
+      <input class="search-box" [(ngModel)]="searchText" placeholder="Search for your name" (click)="hideList()" (keydown.enter)="unHideList()">
+      <input type="submit" class="button" value="Search" (click)="unHideList()">
+    <div *ngIf="fullList == 1 && searchText !== undefined">
+      <ul class="list-group">
+          <li class="list-group-item" 
+          *ngFor="let contact of contacts | grdFilter: {name: searchText, email: searchText} ; let i=index;"
+          (click)="selectContact(contact)"
+          [class.active]="contact === selectedContact">
+            {{contact.name}}
+        </li>
+      </ul>
+      <!-- <button class="btn btn-warning" (click)="createNewContact()">New</button> -->
+    </div>
   </div>
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+  <div class="row" *ngIf="fullList == 1">
+    <div class="col-md-8 col-md-offset-2">
         <contact-details
         [contact]="selectedContact"
         [createHandler]="addContact"
