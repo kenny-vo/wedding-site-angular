@@ -7,8 +7,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ContactDetailsComponent } from './contacts/contact-details/contact-details.component';
 import { ContactListComponent } from './contacts/contact-list/contact-list.component';
+import { PhotosComponent } from './photos/photos.component';
 
 import { GrdFilterPipe } from './contacts/grd-filter.pipe';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -16,13 +19,16 @@ import { GrdFilterPipe } from './contacts/grd-filter.pipe';
     AppComponent,
     ContactDetailsComponent,
     ContactListComponent,
-    GrdFilterPipe
+    GrdFilterPipe,
+    PhotosComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
