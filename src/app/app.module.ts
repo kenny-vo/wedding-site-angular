@@ -12,6 +12,9 @@ import { PhotosComponent } from './photos/photos.component';
 import { GrdFilterPipe } from './contacts/grd-filter.pipe';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { KlComponent } from './kl/kl.component';
+import { ContactListklComponent } from './contacts/contact-list-kl/contact-list-kl.component';
+import { LightboxModule } from 'ngx-lightbox';
 
 
 @NgModule({
@@ -19,16 +22,19 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     ContactDetailsComponent,
     ContactListComponent,
+    ContactListklComponent,
     GrdFilterPipe,
     PhotosComponent,
-    HomeComponent
+    HomeComponent,
+    KlComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LightboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

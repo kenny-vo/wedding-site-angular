@@ -14,10 +14,10 @@
         <ul class="nav navbar-nav navbar-left">
           <li><a class="grow" href="/">Home</a></li>
           <li><a class="grow" (click)="scrollToElement(info)">Info</a></li>
-          <li><a class="grow" (click)="scrollToElement(events)">Events</a></li>
+          <li><a class="grow" (click)="scrollToElement(program)">Program</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a class="grow" (click)="scrollToElement(info)">RSVP</a></li>
+          <li><a class="grow" (click)="scrollToElement(rsvp)">RSVP</a></li>
           <li><a class="grow" routerLink="/photos">Photos</a></li>
           <li><a class="grow" (click)="scrollToElement(travel)">Travel</a></li>
         </ul>
@@ -26,11 +26,14 @@
   </nav>
 <!-- Main Landing-->
 <section class="parallax main-landing" #top>
-    <div class="main-landing-content">
-      <h1 class="fade-in one"> shan <br/> & <br/> kenny</h1>
-      <h3 class="fade-in two">10. 18. 19</h3>
+  <div class="main-landing-content">
+    <h1 class="fade-in one"> shan <br/> & <br/> kenny</h1>
+    <h3 class="fade-in two">10. 18. 19</h3>
+    <div class="fade-in two" #rsvp>
+        <button class="rsvp-button" data-toggle="modal" data-target="#rsvpModal">RSVP</button>
     </div>
-  </section>
+  </div>
+</section>
   <!-- Home Info -->
   <section class="home-info-section" id="info" #info>
     <div class="container">
@@ -38,12 +41,11 @@
         <div class="col-lg-8 col-lg-offset-2 text-center home-info">
           <h2>Please join us for our wedding celebration</h2>
           <hr/>
-          <h3>10. 18. 19</h3>
+          <h3>Friday, October 18, 2019</h3>
           <p>
             <a href="https://www.wildflower.org/visit">Lady Bird Johnson Wildflower Center</a> <br/> 4801 La Crosse Avenue<br/> Austin, Texas
           </p>
-          <button class="rsvp-button button" data-toggle="modal" data-target="#rsvpModal">RSVP</button>
-          <!-- RSVP Modal -->
+          <p>- Formal Attire -</p>
           <div class="modal fade" id="rsvpModal" tabindex="-1" role="dialog" aria-labelledby="RSVP Modal">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -61,45 +63,80 @@
       </div>
     </div>
   </section>
-  <!-- Events Section -->
-  <section class="home-events-section" id="events" #events>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 text-center home-events">
-          <h2>Events</h2>
-          <hr/>
+    <!-- Parallax Sitting Section -->
+    <section class="parallax hands-section">
+        <div class="container">
           <div class="row">
-            <div class="col-md-4 col-lg-6 col-sm-12 text-center">
-              <h3>Wedding Ceremony</h3>
-              <br/>
-              <div>
-                6:00pm
-              </div>
-            </div>
-            <div class="col-md-4 col-lg-6 col-sm-12 text-center">
-              <h3>Cocktail Hour</h3>
-              <br/>
-              <div>
-                6:30pm
-              </div>
-            </div>
-            <div class="col-md-4 col-lg-6 col-sm-12 text-center">
-              <h3>Reception</h3>
-              <br/>
-              <div>
-                7:30pm
-              </div>
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <div class="center-paralax-text">
+                  <p class="fade-in one"> Wedding Day</p>
+                </div>
             </div>
           </div>
+        </div>
+      </section>
+  <!-- Events Section -->
+  <section class="home-program-section" id="program" #program>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3 text-center home-program">
+          <h2>Program</h2>
+          <hr/>
+          <div class="row">
+          <div class="program-left col-sm-6">
+            <p>
+              6pm 
+            </p>
+            <p>
+              6:30pm 
+            </p>
+            <p>
+              7pm
+            </p>
+            <p>
+              9pm
+            </p>
+            <p>
+              10pm
+            </p>
+            <p>
+              11pm
+            </p>
+          </div>
+          <div class="program-right col-sm-6">
+              <p>
+                 ceremony
+              </p>
+              <p>
+                cocktail hour
+              </p>
+              <p>
+                dinner & toasts
+              </p>
+              <p>
+                dancing & dessert
+              </p>
+              <p>
+                late night snack
+              </p>
+              <p>
+                last dance
+              </p>
+            </div>
+          </div>
+          <p style="padding-top: 10px; padding-left: 40px;">- Please arrive before 5:45pm -</p>
         </div>
       </div>
     </div>
   </section>
-  <!-- Small Parallax Sitting Section -->
-  <section class="parallax-small sitting-section">
+  <!-- Parallax Sitting Section -->
+  <section class="parallax sitting-section">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 text-center">
+            <div class="center-paralax-text">
+              <p class="fade-in one"> Travel to Austin</p>
+            </div>
         </div>
       </div>
     </div>
@@ -112,17 +149,21 @@
           <h2>Travel</h2>
           <hr/>
           <p>
-            <a href="https://www.wildflower.org/visit"><h3>South Congress Hotel</h3></a>
-            Ask about our group rate. <br />
-            <br/> 2222 South Congress Ave
-            <br/> Austin, Texas 78704
+            Our wedding venue is located <a href="https://www.wildflower.org/visit">here</a>, about 17 mins from Downtown Austin.
           </p>
+          <h3 >- Stay -</h3>
+          <p>There are lots of lodging options to suit your needs.</p>
+          <p>We suggest a hotel or Airbnb in Downtown Austin or the following areas: South Congress, South Lamar, East Austin, and Zilker/Barton Springs.</p>
+          <p>Airbnb is a wonderful option for large groups or those who want a more unique Austin experience. Options range from private rooms to an entire home.</p>
+          <h3>- Getting Around -</h3>
+          <p>Uber and Lyft are easily available.You can also hop on city bikes and Lime or Bird scooters.</p>
+          <p>Need help or recommendations? <a href="mailto:koayvo@gmail.com">Email us.</a></p>
         </div>
       </div>
     </div>
   </section>
   <!-- City Guide Section -->
-  <section class="home-city-section" id="city">
+  <!-- <section class="home-city-section" id="city">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 text-center home-city">
@@ -142,14 +183,14 @@
                 </ul>
               </div>
             </div>
-            <!-- <div class="col-md-6 col-sm-12 text-center">
+            <div class="col-md-6 col-sm-12 text-center">
               <img src="../assets/images/google-map-placeholder.jpg"></img>
-            </div> -->
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- Footer -->
   <footer class="footer">
     <div class="container">

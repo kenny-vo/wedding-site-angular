@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: 'Caslon';
   src: url('../../assets/fonts/casloncp-webfont.woff2') format('woff2'), url('../../assets/fonts/casloncp-webfont.woff') format('woff');
@@ -30,7 +29,7 @@ body {
 	opacity:0;
 	transition: opacity 2s;
 	-webkit-transition: opacity 2s; /* Safari */
-	overflow-x: hidden;
+	overflow-x: hidden !important;
   overflow-y: scroll;
 }
 
@@ -43,7 +42,7 @@ h3 {
 }
 
 p {
-	line-height: 2;
+	line-height: 1.4;
 	letter-spacing: 1px;
 	font-size: 17px;
   font-family: 'Caslon';
@@ -177,7 +176,7 @@ a {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
-	transform: translateZ(3px) scale(1.08);
+	transform: translateZ(3px) scale(1);
 }
 
 .main-landing-content {
@@ -203,6 +202,21 @@ a {
   margin-top: 0px;
 }
 
+.rsvp-button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  margin-left: 40px;
+  font-family: 'Caslon';
+  padding-top: 3px;
+
+  &:hover, &:focus, &:active {
+    background: white;
+    color: black;
+    border: none;
+  }
+}
+
 .sitting-section {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
 	url('../../assets/images/shan-kenny-sitting.jpg');
@@ -213,14 +227,50 @@ a {
 	transform: translateZ(3px) scale(1.08);
 }
 
-.home-info, .home-travel, .home-events, .home-city {
+.hands-section {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+	url('../../assets/images/shan-kenny-photo-hands.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transform: translateZ(3px) scale(1.08);
+}
+
+.home-program {
+  p {
+    margin: 0px;
+  }
+}
+
+.program-left {
+  text-align: right
+}
+.program-right {
+  text-align: left
+}
+
+
+.center-paralax-text {
+  padding-top: 50%;
+
+  p {
+    color: white;
+    font-size: 70px;
+    font-weight: 300px;
+    line-height: 1em;
+    text-transform: uppercase;
+  }
+}
+
+.home-info, .home-travel, .home-program, .home-city {
 	padding-top: 100px;
 	padding-bottom: 100px;
 }
 
-.home-city-section, .home-events-section {
-  background-color: whitesmoke;
-}
+// .home-city-section, .home-program-section {
+//   background-color: whitesmoke;
+// }
 
 .home-city img {
   width: 100%;
@@ -229,6 +279,10 @@ a {
 .home-city li {
   list-style: none;
   line-height: 2;
+}
+
+.footer {
+  border-top: 1px solid lightgrey;
 }
 
 .footer p {

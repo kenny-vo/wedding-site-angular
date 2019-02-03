@@ -3,13 +3,13 @@ import { Contact } from '../contact';
 import { ContactService } from '../contact.service';
 
 @Component({
-  selector: 'contact-list',
-  templateUrl: './contact-list.component.html',
-  styleUrls: ['./contact-list.component.scss'],
+  selector: 'contact-list-kl',
+  templateUrl: './contact-list-kl.component.html',
+  styleUrls: ['./contact-list-kl.component.scss'],
   providers: [ContactService]
 })
 
-export class ContactListComponent implements OnInit {
+export class ContactListklComponent implements OnInit {
 
   contacts: Contact[]
   selectedContact: Contact
@@ -50,7 +50,7 @@ export class ContactListComponent implements OnInit {
 
   }
 
-  createNewContact() {
+  createNewContactkl() {
     var contact: Contact = {
       name: '',
       rsvp: '',
@@ -60,7 +60,7 @@ export class ContactListComponent implements OnInit {
       guest_name: '',
       dietary: '',
       comment: '',
-      kl: false
+      kl: true
     };
 
     // By default, a newly-created contact will have the selected state.
