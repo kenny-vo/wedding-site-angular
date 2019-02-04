@@ -28,5 +28,4 @@ export class HeaderComponent implements OnInit {
   }
 
   name='Angular'
-
 }
