@@ -12,14 +12,14 @@
     </div>
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="nav navbar-nav navbar-left">
-        <li><a class="grow" (click)='scrollToElement(info)'>RSVP</a></li>
+        <li><a class="grow" (click)='scrollToElement(info)' data-toggle="modal" data-target="#rsvpModal">RSVP</a></li>
         <li><a class="grow" (click)='scrollToElement(info)'>Info</a></li>
         <li><a class="grow" (click)='scrollToElement(program)'>Program</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="grow" routerLink="/photos">Photos</a></li>
+        <li><a class="grow" routerLink="#">Photos</a></li>
         <li><a class="grow" (click)='scrollToElement(travel)'>Travel</a></li>
-        <li><a class="grow" routerLink="/" fragment="travel">FAQ</a></li>
+        <li><a class="grow" routerLink="#">FAQ</a></li>
       </ul>
     </div>
   </div>
@@ -46,6 +46,7 @@
               <a href="https://www.wildflower.org/visit">Lady Bird Johnson Wildflower Center</a> <br/> 4801 La Crosse Avenue<br/> Austin, Texas
             </p>
             <p>- Formal Attire -</p>
+            <button class="button" data-toggle="modal" data-target="#rsvpModal">RSVP</button>
             <div class="modal fade" id="rsvpModal" tabindex="-1" role="dialog" aria-labelledby="RSVP Modal">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -162,38 +163,4 @@
         </div>
       </div>
     </section>
-    <!-- City Guide Section -->
-    <!-- <section class="home-city-section" id="city">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 text-center home-city">
-            <h2>City Guide</h2>
-            <hr/>
-            <div class="row">
-              <div class="col-md-6 col-sm-12 text-center">
-                <h3>Our favorite things to do!</h3>
-                <br/>
-                <div>
-                  <ul>
-                    <li>Hang out at Barton Springs</li>
-                    <li>Get bbq at Terry Blacks!</li>
-                    <li>Walk along the boardwalk</li>
-                    <li>Check out happy hours on west 6th</li>
-                    <li>Grab a breakfast taco at Papalotte!</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-12 text-center">
-                <img src="../assets/images/google-map-placeholder.jpg"></img>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <p class="text-muted text-center">Shan & Kenny 2019</p>
-      </div>
-    </footer>
+
