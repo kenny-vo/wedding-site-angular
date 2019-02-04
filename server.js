@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
 
-app.get('/kl', function(req, res){
+app.get('*', function(req, res){
   res.sendFile(__dirname + '/dist/index.html');
 });
 
