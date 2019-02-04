@@ -12,7 +12,7 @@
     </div>
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="nav navbar-nav navbar-left">
-        <li><a class="grow" (click)='scrollToElement(info)'>RSVP</a></li>
+        <li><a class="grow" (click)='scrollToElement(info)' data-toggle="modal" data-target="#rsvpModal">RSVP</a></li>
         <li><a class="grow" (click)='scrollToElement(info)'>Info</a></li>
         <li><a class="grow" (click)='scrollToElement(program)'>Program</a></li>
       </ul>
@@ -52,7 +52,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title">Please RSVP Here</h4>
+                  <h4 class="modal-title">Please RSVP By April 30th, 2019</h4>
                 </div>
                 <div class="modal-body">
                   <contact-list></contact-list>
