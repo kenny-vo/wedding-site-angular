@@ -5,13 +5,16 @@ import { HomeComponent } from './home/home.component';
 import { KlComponent } from './kl/kl.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent},
+  { path: '', component: HomeComponent },
   { path: 'photos', component: PhotosComponent },
-  { path: 'kl', component: KlComponent}
+  { path: 'kl', component: KlComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    anchorScrolling: 'enabled'
+  })
+],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

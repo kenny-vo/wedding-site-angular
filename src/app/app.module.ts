@@ -15,7 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { KlComponent } from './kl/kl.component';
 import { ContactListklComponent } from './contacts/contact-list-kl/contact-list-kl.component';
 import { LightboxModule } from 'ngx-lightbox';
-
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { LightboxModule } from 'ngx-lightbox';
     GrdFilterPipe,
     PhotosComponent,
     HomeComponent,
-    KlComponent
+    KlComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
