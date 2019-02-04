@@ -16,6 +16,8 @@ import { KlComponent } from './kl/kl.component';
 import { ContactListklComponent } from './contacts/contact-list-kl/contact-list-kl.component';
 import { LightboxModule } from 'ngx-lightbox';
 import { HeaderComponent } from './header/header.component';
+import { FaqComponent } from './faq/faq.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { HeaderComponent } from './header/header.component';
     PhotosComponent,
     HomeComponent,
     KlComponent,
-    HeaderComponent
+    HeaderComponent,
+    FaqComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

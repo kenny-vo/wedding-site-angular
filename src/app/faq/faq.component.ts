@@ -2,13 +2,14 @@ import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { DOCUMENT } from "@angular/platform-browser";
 
 @Component({
-  selector: 'app-kl',
-  templateUrl: './kl.component.html',
-  styleUrls: ['./kl.component.scss']
+  selector: 'app-faq',
+  templateUrl: './faq.component.html',
+  styleUrls: ['./faq.component.scss']
 })
-export class KlComponent implements OnInit {
+export class FaqComponent implements OnInit {
+
   constructor(@Inject(DOCUMENT) private document: Document) { }
-  
+
   ngOnInit() {
   }
   
@@ -20,10 +21,4 @@ export class KlComponent implements OnInit {
       document.getElementById('nav').classList.remove('scrolled');
     }
   }
-
-  scrollToElement($element): void {
-    $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-  }
-
-  name = 'Angular';
 }
