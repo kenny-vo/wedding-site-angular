@@ -45,16 +45,16 @@ a {
 }
 
 .button {
-  background-color: #315684;
-  color: #fff;
+  background-color: white;
+  color: black;
   padding: 5px 10px;
   border-radius: 5px;
   font-weight: 800;
 
   &:hover {
-    background-color: #fff;
-    color: #315684;
-    border: 1px solid #315684;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
