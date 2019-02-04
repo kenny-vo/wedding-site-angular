@@ -12,6 +12,14 @@ app.use(bodyParser.json());
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
 
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/dist/index.html');
+});
+
+app.get('/kl', function(req, res){
+  res.sendFile(__dirname + '/dist/index.html');
+});
+
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
 var db;
 
@@ -31,14 +39,6 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://localhost:2701
     var port = server.address().port;
     console.log("App now running on port", port);
   });
-});
-
-if (process.env.NODE_ENV === 'production') {
-	app.use(express.static('client/build'));
-}
-
-app.get('*', (request, response) => {
-	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
 // CONTACTS API ROUTES BELOW
