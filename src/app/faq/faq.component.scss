@@ -26,20 +26,8 @@
 }
 
 h2 {
-  font-family: 'Modern-Regular';
-}
-
-h3 {
   font-family: 'Caslon';
 }
-
-p {
-	line-height: 1.4;
-	letter-spacing: 1px;
-	font-size: 17px;
-  font-family: 'Caslon';
-}
-
 a {
   color: inherit;
 }
@@ -176,7 +164,17 @@ a {
   margin-bottom: 70px;
   h3 {
     margin-bottom: 0px;
+    font-family: 'Caslon';
   }
+
+  p {
+    line-height: 1.1;
+    letter-spacing: 1px;
+    font-size: 22px;
+    font-family: 'Modern-Regular';
+    padding-bottom: 20px;
+  }
+  
 }
 
 .center-paralax-text {
@@ -188,8 +186,11 @@ a {
     font-weight: 300px;
     line-height: 1em;
     text-transform: uppercase;
+    font-family: 'Caslon';
   }
 }
+
+
 
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
