@@ -82,6 +82,10 @@ a {
     line-height: 1em;
     text-transform: uppercase;
   }
+
+  @media(max-width:768px) {
+    padding-top: 100%;
+  }
 }
 
 .button {
@@ -100,13 +104,18 @@ a {
     transition: all .35s;
   }
 }
-
 /*Navigation Bar*/
 .grow:hover {
   cursor: pointer;
   -webkit-transform: scale(1.07);
   -ms-transform: scale(1.07);
   transform: scale(1.07);
+
+  @media screen and (max-width: 768px){
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transform: scale(1.0);
+  }
 }
 
 .navbar-default {
@@ -130,17 +139,17 @@ a {
   }
 }
 
-.test {
-  color: black !important;
-}
-
 /*Center Navbar Brand*/
 .navbar-brand {
   position: absolute;
   left: 50%;
   margin-left: -47px !important;
   display: block;
-	color: black;
+  color: #fff;
+  
+  @media screen and (max-width: 768px) {
+    color: black !important;
+  }
 
 }
 
@@ -158,10 +167,18 @@ a {
   font-size: 12px;
   font-weight: 700;
   color: black;
+
+  @media(max-width:768px) {
+    text-align: center;
+  }
 }
 
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
-	color: #fff;
+  color: #fff;
+
+  @media(max-width:768px) {
+    text-decoration: underline;
+  }
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {

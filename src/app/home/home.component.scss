@@ -58,12 +58,50 @@ a {
   color: inherit;
 }
 
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards; 
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay:1.2s;
+  animation-delay: 1.2s;
+}
+
 /*Navigation Bar*/
 .grow:hover {
   cursor: pointer;
   -webkit-transform: scale(1.07);
   -ms-transform: scale(1.07);
   transform: scale(1.07);
+
+  @media screen and (max-width: 768px){
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transform: scale(1.0);
+  }
 }
 
 .navbar-default {
@@ -93,7 +131,11 @@ a {
   left: 50%;
   margin-left: -47px !important;
   display: block;
-	color: #fff;
+  color: #fff;
+  
+  @media screen and (max-width: 767px) {
+    color: black !important;
+  }
 
 }
 
@@ -111,10 +153,18 @@ a {
   font-size: 12px;
   font-weight: 700;
   color: black;
+
+  @media(max-width:768px) {
+    text-align: center;
+  }
 }
 
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
-	color: #fff;
+  color: #fff;
+
+  @media(max-width:768px) {
+    text-decoration: underline;
+  }
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
@@ -168,50 +218,75 @@ a {
 	flex: 1 0 auto;
 }
 
-.parallax-small {
-	position: relative;
-	width: 100%;
-	height: 50vh;
-	display: flex;
-	flex: 1 0 auto;
-}
-
 .main-landing {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
   url('../../assets/images/shan-kenny-walking.jpg');
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-size: cover;
-	transform: translateZ(3px) scale(1);
-}
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  transform: translateZ(3px) scale(1);
 
-.main-landing-content {
-	position: relative;
-	text-align: left;
-	padding-left: 70%;
-}
+  @media screen and (max-width: 768px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../../assets/images/shan-kenny-mobile.jpg');
+  }
 
-.main-landing h1 {
-	font-family: 'Caslon';
-	font-size: 8rem;
-	font-weight: 400;
-	color: #fff;
-	margin-top: 200px;
-  margin-bottom: 0px;
-}
+  .main-landing-content {
+    position: relative;
+    text-align: left;
+    padding-left: 70%;
+  
+    h1 {
+      font-family: 'Caslon';
+      font-size: 8rem;
+      font-weight: 400;
+      color: #fff;
+      margin-top: 200px;
+      margin-bottom: 0px;
+    }
+  
+    h3 {
+      color: #fff;
+      font-weight: 400;
+      font-size: 2.5rem;
+      letter-spacing: 3px;
+      margin-top: 0px;
+    }
+    
+    @media screen and (max-width: 768px) {
+      padding-left: 0px;
+      text-align: center;
 
-.main-landing h3 {
-  color: #fff;
-  font-weight: 400;
-  font-size: 2.5rem;
-  letter-spacing: 3px;
-  margin-top: 0px;
-}
+      h1 {
+        font-size: 8rem;
+        margin-top: 500px;
+        line-height: 1;
+      }
+    }
+    @media screen and (max-width: 568px) {
+      padding-left: 0px;
+      text-align: center;
 
-.home-info-header {
-  font-family: 'Modern-Regular';
-  font-size: 30px;
-  text-transform: none;
+      h1 {
+        font-size: 7rem;
+        margin-top: 350px;
+        line-height: 1;
+      }
+    }
+    @media screen and (max-width: 328px) {
+      padding-left: 0px;
+      text-align: center;
+
+      h1 {
+        font-size: 6rem;
+        margin-top: 280px;
+        line-height: 1;
+      }
+    }
+  }
 }
 
 .rsvp-button {
@@ -220,9 +295,7 @@ a {
   color: white;
   border: 1px solid white;
   font-family: 'Caslon';
-  padding-top: 3px;
-  padding-left: 45px;
-  padding-right: 45px;
+  padding: 3px 45px 0px 45px;
   font-size: 18px;
 
   &:hover, &:focus, &:active {
@@ -230,23 +303,17 @@ a {
     color: black;
     border: none;
   }
-}
 
-.rsvp-button-invert {
-  margin-top: 20px;
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-  font-family: 'Caslon';
-  padding-top: 3px;
-  padding-left: 45px;
-  padding-right: 45px;
-  font-size: 18px;
-
-  &:hover, &:focus, &:active {
-    background: black;
-    color: white;
+  &.invert {
+    background-color: white;
+    color: black;
     border: 1px solid black;
+
+    &:hover, &:focus, &:active {
+      background: black;
+      color: white;
+      border: 1px solid black;
+    }
   }
 }
 
@@ -256,7 +323,10 @@ a {
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 	transform: translateZ(3px) scale(1.08);
 }
 
@@ -266,23 +336,12 @@ a {
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 	transform: translateZ(3px) scale(1.08);
 }
-
-.home-program {
-  p {
-    margin: 0px;
-  }
-}
-
-.program-left {
-  text-align: right
-}
-.program-right {
-  text-align: left
-}
-
 
 .center-paralax-text {
   padding-top: 50%;
@@ -293,7 +352,12 @@ a {
     font-weight: 300px;
     line-height: 1em;
     text-transform: uppercase;
+ 
+    @media screen and (max-width: 768px){
+      font-size: 60px;
+    }
   }
+
 }
 
 .home-info, .home-travel, .home-city {
@@ -301,18 +365,26 @@ a {
 	padding-bottom: 140px;
 }
 
+.home-info-header {
+  font-family: 'Modern-Regular';
+  font-size: 30px;
+  text-transform: none;
+}
+
 .home-program {
   padding-top: 90px;
-	padding-bottom: 130px;
-}
+  padding-bottom: 130px;
 
-.home-city img {
-  width: 100%;
-}
+  p {
+    margin: 0px;
+  }
 
-.home-city li {
-  list-style: none;
-  line-height: 2;
+  .program-left {
+    text-align: right
+  }
+  .program-right {
+    text-align: left
+  }
 }
 
 .home-travel-section {
@@ -329,33 +401,12 @@ a {
   }
 }
 
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-.fade-in {
-  opacity:0;
-  -webkit-animation:fadeIn ease-in 1;
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
-
-  -webkit-animation-fill-mode:forwards; 
-  -moz-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
-
-  -webkit-animation-duration:1s;
-  -moz-animation-duration:1s;
-  animation-duration:1s;
-}
-
-.fade-in.one {
-  -webkit-animation-delay: 0.7s;
-  -moz-animation-delay: 0.7s;
-  animation-delay: 0.7s;
-}
-
-.fade-in.two {
-  -webkit-animation-delay: 1.2s;
-  -moz-animation-delay:1.2s;
-  animation-delay: 1.2s;
+.home-city-section {
+  img {
+    width: 100%;
+  }
+  li {
+    list-style: none;
+    line-height: 2;
+  }
 }

@@ -12,13 +12,13 @@
     </div>
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="nav navbar-nav navbar-left">
-        <li><a class="grow" (click)='scrollToElement(info)' data-toggle="modal" data-target="#rsvpModal">RSVP</a></li>
-        <li><a class="grow" (click)='scrollToElement(info)'>Info</a></li>
-        <li><a class="grow" (click)='scrollToElement(program)'>Program</a></li>
+        <li><a data-toggle="collapse" class="grow" (click)='scrollToElement(info)' data-toggle="modal" data-target="#rsvpModal">RSVP</a></li>
+        <li><a data-toggle="collapse" data-target="#navbar" class="grow" (click)='scrollToElement(info)'>Info</a></li>
+        <li><a data-toggle="collapse" data-target="#navbar" class="grow" (click)='scrollToElement(program)'>Program</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a class="grow" routerLink="/photos">Photos</a></li>
-        <li><a class="grow" (click)='scrollToElement(travel)'>Travel</a></li>
+        <li><a data-toggle="collapse" data-target="#navbar" class="grow" (click)='scrollToElement(travel)'>Travel</a></li>
         <li><a class="grow" routerLink="/faq">FAQ</a></li>
       </ul>
     </div>
@@ -26,64 +26,68 @@
 </nav>
 <!-- Main Landing-->
 <section class="parallax main-landing" #top>
-  <div class="main-landing-content">
-    <h1 class="fade-in one"> shan <br/> & <br/> kenny</h1>
-    <h3 class="fade-in two">10. 18. 19</h3>
-    <div class="fade-in two">
-        <button class="rsvp-button" data-toggle="modal" data-target="#rsvpModal">RSVP</button>
+  <div class="container">
+    <div class="main-landing-content row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <h1 class="fade-in one"> shan <br/> & <br/> kenny</h1>
+        <h3 class="fade-in two">10. 18. 19</h3>
+        <div class="fade-in two">
+            <button class="rsvp-button" data-toggle="modal" data-target="#rsvpModal">RSVP</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-  <!-- Home Info -->
-  <section class="home-info-section" id="info" #info>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 text-center home-info">
-          <p class="home-info-header">Please join us for our wedding celebration</p>
-          <hr/>
-          <h3 style="padding-bottom: 10px;">Friday, October 18, 2019</h3>
-          <p>
-            six o'clock in the evening <br/> <a href="https://www.wildflower.org/visit">Lady Bird Johnson Wildflower Center</a> <br/> 4801 La Crosse Avenue<br/> Austin, Texas
-          </p>
-          <p style="padding-top: 28px;">- Formal Attire -</p>
-          <button class="rsvp-button-invert" data-toggle="modal" data-target="#rsvpModal">RSVP</button>
-          <div class="modal fade" id="rsvpModal" tabindex="-1" role="dialog" aria-labelledby="RSVP Modal">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title">Please RSVP By July 1st, 2019</h4>
-                </div>
-                <div class="modal-body">
-                  <contact-list></contact-list>
-                </div>
+<!-- Home Info -->
+<section class="home-info-section" id="info" #info>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center home-info">
+        <p class="home-info-header">Please join us for our wedding celebration</p>
+        <hr/>
+        <h3 style="padding-bottom: 10px;">Friday, October 18, 2019</h3>
+        <p>
+          six o'clock in the evening <br/> <a href="https://www.wildflower.org/visit">Lady Bird Johnson Wildflower Center</a> <br/> 4801 La Crosse Avenue<br/> Austin, Texas
+        </p>
+        <p style="padding-top: 28px;">- Formal Attire -</p>
+        <button class="rsvp-button invert" data-toggle="modal" data-target="#rsvpModal">RSVP</button>
+        <div class="modal fade" id="rsvpModal" tabindex="-1" role="dialog" aria-labelledby="RSVP Modal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Please RSVP By July 1st, 2019</h4>
+              </div>
+              <div class="modal-body">
+                <contact-list></contact-list>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-    <!-- Parallax Sitting Section -->
-    <section class="parallax hands-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <div class="center-paralax-text">
-                  <p class="fade-in one"> Wedding Day</p>
-                </div>
-            </div>
+  </div>
+</section>
+<!-- Parallax Sitting Section -->
+<section class="parallax hands-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+          <div class="center-paralax-text">
+            <p class="fade-in one"> Wedding Day</p>
           </div>
-        </div>
-      </section>
-  <!-- Program Section -->
-  <section class="home-program-section" id="program" #program>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-lg-offset-3 text-center home-program">
-          <h2>Program</h2>
-          <hr/>
-          <div class="row">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Program Section -->
+<section class="home-program-section" id="program" #program>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-3 text-center home-program">
+        <h2>Program</h2>
+        <hr/>
+        <div class="row">
           <div class="program-left col-sm-6 col-xs-6">
             <p>
               6pm 
@@ -105,92 +109,91 @@
             </p>
           </div>
           <div class="program-right col-sm-6 col-xs-6">
-              <p>
-                 ceremony
-              </p>
-              <p>
-                cocktail hour
-              </p>
-              <p>
-                dinner & toasts
-              </p>
-              <p>
-                dancing & dessert
-              </p>
-              <p>
-                late night snack
-              </p>
-              <p>
-                last dance
-              </p>
-            </div>
-          </div>
-          <p style="padding-top: 30px; padding-left: 40px;">- Please arrive before 5:45pm -</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Parallax Sitting Section -->
-  <section class="parallax sitting-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 text-center">
-            <div class="center-paralax-text">
-              <p class="fade-in one"> Travel to Austin</p>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Travel Section -->
-  <section class="home-travel-section" id="travel" #travel>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 text-center home-travel">
-          <h2>Travel</h2>
-          <hr/>
-          <p style="padding-bottom: 30px;">
-            Our wedding venue is located <a href="https://goo.gl/maps/bRYfhiR5MGS2">here</a>, about 17 mins from Downtown Austin.
-          </p>
-          <h3 style="padding-bottom: 24px;">- Stay -</h3>
-          <p>There are lots of lodging options to suit your needs.</p>
-          <p>We suggest a hotel or Airbnb in Downtown Austin or the following areas: South Congress, South Lamar, East Austin, and Zilker/Barton Springs.</p>
-          <p>Airbnb is a wonderful option for large groups or those <br/>who want a more unique Austin experience. <br/>Options range from private rooms to an entire home.</p>
-          <h3>- Getting Around -</h3>
-          <p>Uber and Lyft are easily available. <br/>You can also hop on city bikes and Lime or Bird scooters.</p>
-          <br/>
-          <strong><p>Need help or recommendations? <a href="mailto:koayvo@gmail.com">Email us.</a></p></strong>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- City Guide Section -->
-  <!-- <section class="home-city-section" id="city">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 text-center home-city">
-          <h2>City Guide</h2>
-          <hr/>
-          <div class="row">
-            <div class="col-md-6 col-sm-12 text-center">
-              <h3>Our favorite things to do!</h3>
-              <br/>
-              <div>
-                <ul>
-                  <li>Hang out at Barton Springs</li>
-                  <li>Get bbq at Terry Blacks!</li>
-                  <li>Walk along the boardwalk</li>
-                  <li>Check out happy hours on west 6th</li>
-                  <li>Grab a breakfast taco at Papalotte!</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-12 text-center">
-              <img src="../assets/images/google-map-placeholder.jpg"></img>
-            </div>
+            <p>
+                ceremony
+            </p>
+            <p>
+              cocktail hour
+            </p>
+            <p>
+              dinner & toasts
+            </p>
+            <p>
+              dancing & dessert
+            </p>
+            <p>
+              late night snack
+            </p>
+            <p>
+              last dance
+            </p>
           </div>
         </div>
+        <p style="padding-top: 30px; padding-left: 40px;">- Please arrive before 5:45pm -</p>
       </div>
     </div>
-  </section> -->
-  <!-- Footer -->
+  </div>
+</section>
+<!-- Parallax Sitting Section -->
+<section class="parallax sitting-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+          <div class="center-paralax-text">
+            <p class="fade-in one"> Travel to Austin</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Travel Section -->
+<section class="home-travel-section" id="travel" #travel>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center home-travel">
+        <h2>Travel</h2>
+        <hr/>
+        <p style="padding-bottom: 30px;">
+          Our wedding venue is located <a href="https://goo.gl/maps/bRYfhiR5MGS2">here</a>, about 17 mins from Downtown Austin.
+        </p>
+        <h3 style="padding-bottom: 24px;">- Stay -</h3>
+        <p>There are lots of lodging options to suit your needs.</p>
+        <p>We suggest a hotel or Airbnb in Downtown Austin or the following areas: South Congress, South Lamar, East Austin, and Zilker/Barton Springs.</p>
+        <p>Airbnb is a wonderful option for large groups or those <br/>who want a more unique Austin experience. <br/>Options range from private rooms to an entire home.</p>
+        <h3>- Getting Around -</h3>
+        <p>Uber and Lyft are easily available. <br/>You can also hop on city bikes and Lime or Bird scooters.</p>
+        <br/>
+        <strong><p>Need help or recommendations? <a href="mailto:koayvo@gmail.com">Email us.</a></p></strong>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- City Guide Section -->
+<!-- <section class="home-city-section" id="city">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center home-city">
+        <h2>City Guide</h2>
+        <hr/>
+        <div class="row">
+          <div class="col-md-6 col-sm-12 text-center">
+            <h3>Our favorite things to do!</h3>
+            <br/>
+            <div>
+              <ul>
+                <li>Hang out at Barton Springs</li>
+                <li>Get bbq at Terry Blacks!</li>
+                <li>Walk along the boardwalk</li>
+                <li>Check out happy hours on west 6th</li>
+                <li>Grab a breakfast taco at Papalotte!</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12 text-center">
+            <img src="../assets/images/google-map-placeholder.jpg"></img>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
