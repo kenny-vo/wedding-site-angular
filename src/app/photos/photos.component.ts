@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { Lightbox, LightboxConfig, LightboxEvent, LIGHTBOX_EVENT, IEvent, IAlbum } from 'ngx-lightbox';
 import { Subscription } from 'rxjs';
 
@@ -46,6 +46,15 @@ export class PhotosComponent implements OnInit {
   private _onReceivedEvent(event: IEvent): void {
     if (event.id === LIGHTBOX_EVENT.CLOSE) {
       this._subscription.unsubscribe();
+    }
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {      
+      document.getElementById('nav').classList.add('scrolled');
+    } else {
+      document.getElementById('nav').classList.remove('scrolled');
     }
   }
 
