@@ -1,6 +1,7 @@
 export class Contact {
   _id?: string;
-  name: string;
+  first_name: string;
+  last_name: string;
   rsvp: string;
   email: string;
   guests: number;
