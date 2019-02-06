@@ -1,6 +1,6 @@
 <div class="row">
+  <h2 style="margin-top: 0px;" *ngIf="rsvp_sent == 1" class="rsvp-thanks fade-in one">Thank you for responding!</h2>
   <div class="col-md-8 col-md-offset-2">
-    <h2 *ngIf="rsvp_sent == 1" class="rsvp-thanks fade-in one">Thank you for responding!</h2>
       <input class="search-box" [(ngModel)]="searchText" placeholder="Search for your name" (click)="hideList()" (keydown.enter)="unHideList()">
       <input type="submit" class="button" value="Search" (click)="unHideList()">
     <div *ngIf="fullList == 1 && searchText !== undefined">
@@ -12,7 +12,7 @@
             {{contact.name}}
         </li >
       </ul>
-      <button class="button" (click)="createNewContact()">Add New Entry</button>
+      <button class="button" (click)="createNewContact()">Fill Out RSVP Form</button>
     </div>
   </div>
   <div class="row" *ngIf="fullList == 1">

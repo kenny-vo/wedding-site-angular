@@ -80,6 +80,8 @@ export class ContactListComponent implements OnInit {
   addContact = (contact: Contact) => {
     this.contacts.push(contact);
     this.selectContact(contact);
+    this.selectedContact = null;
+    this.rsvp_sent = 1;
     return this.contacts;
   }
 
