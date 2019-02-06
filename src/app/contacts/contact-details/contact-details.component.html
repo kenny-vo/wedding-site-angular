@@ -6,52 +6,46 @@
 </div>
 <div *ngIf="contact" class="row">
   <form class="col-md-12">
-        <div class="form-group">
-          <label for="contact-name">First Name</label>
-          <input class="form-control" name="contact-first_name" [(ngModel)]="contact.first_name" placeholder="Your First Name"/>
-        </div>
-        <div class="form-group">
-          <label for="contact-name">Last Name</label>
-          <input class="form-control" name="contact-last_name" [(ngModel)]="contact.last_name" placeholder="Your Last Name"/>
-        </div>
-        <div class="form-group">
-          <label for="contact-email">Email</label>
-          <input class="form-control" name="contact-email" [(ngModel)]="contact.email" placeholder="Your Email"/>
-        </div>
-        <div class="form-group">
-          <label for="contact-email">Please join us for our wedding!</label>
-          <select [(ngModel)]="contact.rsvp" class="form-control" name="contact-rsvp" aria-placeholder="Select One">
-            <option [ngValue]="undefined" disabled selected>Select One</option>
-            <option>Accept</option>
-            <option>Decline</option>
-          </select>     
-        </div>
-        <div class="form-group" *ngIf="contact.rsvp == 'Accept' && contact.allowed_guests > 0">
-          <label for="contact-email">Number Attending? </label>
-          <input class="form-control" name="contact-guests" [(ngModel)]="contact.guests" placeholder=""/>
-          <small id="guestHelp" class="form-text text-muted">We have reserved {{contact.allowed_guests}} guest(s) for you</small>
-        </div>
-        <div class="form-group" *ngIf="contact.rsvp == 'Accept' && contact.allowed_guests > 0">
-          <label for="contact-email">Guest Name(s)</label>
-          <input class="form-control" name="contact-guest_name" [(ngModel)]="contact.guest_name" placeholder="Please enter full name"/>
-        </div>
-        <div class="form-group" *ngIf="contact.rsvp == 'Accept'">
-          <label for="contact-email">Dietary Restrictions?</label>
-          <select [(ngModel)]="contact.dietary" class="form-control" name="contact-dietary" aria-placeholder="Select One">
-            <option [ngValue]="undefined" disabled selected>Select One</option>
-            <option>No</option>
-            <option>Yes</option>
-          </select>
-          <small id="dietaryHelp" class="form-text text-muted">If yes, please comment below.</small>
-        </div>
-        <div class="form-group" *ngIf="contact.rsvp == 'Accept'">
-          <label for="contact-comment">Comments</label>
-          <textarea type="text" rows="2" maxlength="200" class="form-control" name="contact-comment" [(ngModel)]="contact.comment" placeholder="Let us know if dietary restrictions"></textarea>
-        </div>
-     
-  
+      <div class="form-group">
+        <label for="contact-name">Name</label>
+        <input class="form-control" name="contact-name" [(ngModel)]="contact.name" placeholder="Your Name"/>
+      </div>
+      <div class="form-group">
+        <label for="contact-email">Email</label>
+        <input class="form-control" name="contact-email" [(ngModel)]="contact.email" placeholder="Your Email"/>
+      </div>
+      <div class="form-group">
+        <label for="contact-rsvp">Please join us for our wedding!</label>
+        <select [(ngModel)]="contact.rsvp" class="form-control" name="contact-rsvp" aria-placeholder="Select One">
+          <option [ngValue]="undefined" disabled selected>Select One</option>
+          <option>Accept</option>
+          <option>Decline</option>
+        </select>     
+      </div>
+      <div class="form-group" *ngIf="contact.rsvp == 'Accept' && contact.allowed_guests > 0">
+        <label for="contact-guests">Number Attending? </label>
+        <input class="form-control" name="contact-guests" [(ngModel)]="contact.guests" placeholder=""/>
+        <small id="guestHelp" class="form-text text-muted">We have reserved {{contact.allowed_guests}} guest(s) for you</small>
+      </div>
+      <div class="form-group" *ngIf="contact.rsvp == 'Accept' && contact.allowed_guests > 0">
+        <label for="contact-guests_name">Guest Name(s)</label>
+        <input class="form-control" name="contact-guest_name" [(ngModel)]="contact.guest_name" placeholder="Please enter full name"/>
+      </div>
+      <div class="form-group" *ngIf="contact.rsvp == 'Accept'">
+        <label for="contact-dietary">Dietary Restrictions?</label>
+        <select [(ngModel)]="contact.dietary" class="form-control" name="contact-dietary" aria-placeholder="Select One">
+          <option [ngValue]="undefined" disabled selected>Select One</option>
+          <option>No</option>
+          <option>Yes</option>
+        </select>
+        <small id="dietaryHelp" class="form-text text-muted">If yes, please comment below.</small>
+      </div>
+      <div class="form-group" *ngIf="contact.rsvp == 'Accept'">
+        <label for="contact-comment">Comments</label>
+        <textarea type="text" rows="2" maxlength="200" class="form-control" name="contact-comment" [(ngModel)]="contact.comment" placeholder="Let us know if dietary restrictions"></textarea>
+      </div>
     <button class="btn btn-primary" *ngIf="!contact._id" (click)="createContact(contact)">Create</button>
     <button class="button" *ngIf="contact._id" (click)="updateContact(contact, contact._id)">Update</button>
-    <button class="btn btn-danger" *ngIf="contact._id" (click)="deleteContact(contact._id)">Delete</button>
+    <!-- <button class="btn btn-danger" *ngIf="contact._id" (click)="deleteContact(contact._id)">Delete</button> -->
   </form>
 </div>

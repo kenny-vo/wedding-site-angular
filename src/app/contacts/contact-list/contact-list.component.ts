@@ -52,8 +52,7 @@ export class ContactListComponent implements OnInit {
 
   createNewContact() {
     var contact: Contact = {
-      first_name: '',
-      last_name: '',
+      name: '',
       rsvp: '',
       email: '',
       guests: 0,
