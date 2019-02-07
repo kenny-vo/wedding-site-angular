@@ -180,6 +180,9 @@ a {
   @media(max-width:1024px) {
     background-position: bottom;
   }
+  @media(max-width:768px) {
+    background-attachment: scroll;
+  }
 }
 
 .faq-info-section {

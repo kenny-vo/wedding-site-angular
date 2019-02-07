@@ -216,6 +216,8 @@ a {
 	height: 100vh;
 	display: flex;
   flex: 1 0 auto;
+
+  
 }
 
 .main-landing {
@@ -356,7 +358,7 @@ a {
     -o-background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
 
     &:before {
       content: '';
@@ -392,7 +394,7 @@ a {
     -o-background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
 
     &:before {
       content: '';
