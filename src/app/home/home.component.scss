@@ -217,7 +217,9 @@ a {
 	display: flex;
   flex: 1 0 auto;
 
-  
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
 }
 
 .main-landing {
@@ -232,14 +234,7 @@ a {
   transform: translateZ(3px) scale(1);
 
   @media screen and (max-width: 768px) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
     background: url("../../assets/images/shan-kenny-mobile.jpg");
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     background-attachment: scroll;
 
     &:before {
@@ -350,14 +345,7 @@ a {
   transform: translateZ(3px) scale(1.08);
 
   @media screen and (max-width: 768px) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
     background: url("../../assets/images/shan-kenny-sitting.jpg");
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     background-attachment: scroll;
 
     &:before {
@@ -386,14 +374,7 @@ a {
   transform: translateZ(3px) scale(1.08);
 
   @media screen and (max-width: 768px) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
     background: url("../../assets/images/shan-kenny-photo-hands.jpg");
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     background-attachment: scroll;
 
     &:before {
