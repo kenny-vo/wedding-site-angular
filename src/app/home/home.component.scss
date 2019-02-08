@@ -426,7 +426,7 @@ a {
 
 }
 
-.home-info, .home-travel, .home-city {
+.home-info, .home-city {
 	padding-top: 90px;
 	padding-bottom: 140px;
 }
@@ -451,6 +451,10 @@ a {
   .program-right {
     text-align: left
   }
+}
+
+.home-travel {
+  padding-top: 0px;
 }
 
 .home-travel-section {
