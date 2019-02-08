@@ -18,6 +18,7 @@ import { LightboxModule } from 'ngx-lightbox';
 import { HeaderComponent } from './header/header.component';
 import { FaqComponent } from './faq/faq.component';
 import { FooterComponent } from './footer/footer.component';
+import { PhotosKlComponent } from './photos-kl/photos-kl.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FooterComponent } from './footer/footer.component';
     KlComponent,
     HeaderComponent,
     FaqComponent,
-    FooterComponent
+    FooterComponent,
+    PhotosKlComponent
   ],
   imports: [
     BrowserModule,

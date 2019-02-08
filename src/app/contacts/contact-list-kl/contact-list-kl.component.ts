@@ -60,7 +60,7 @@ export class ContactListklComponent implements OnInit {
       guest_name: '',
       dietary: '',
       comment: '',
-      kl: false
+      kl: true
     };
 
     // By default, a newly-created contact will have the selected state.
@@ -80,6 +80,8 @@ export class ContactListklComponent implements OnInit {
   addContact = (contact: Contact) => {
     this.contacts.push(contact);
     this.selectContact(contact);
+    this.selectedContact = null;
+    this.rsvp_sent = 1;
     return this.contacts;
   }
 

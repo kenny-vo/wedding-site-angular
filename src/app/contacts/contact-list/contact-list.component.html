@@ -9,7 +9,7 @@
           *ngFor="let contact of contacts | grdFilter: {name: searchText, email: searchText} ; let i=index;"
           (click)="selectContact(contact)"
           [class.active]="contact === selectedContact" >
-            {{contact.name}}
+            <span>{{contact.name}}</span>
         </li >
       </ul>
       <button class="button" (click)="createNewContact()">Fill Out RSVP Form</button>

@@ -215,7 +215,9 @@ a {
 	width: 100%;
 	height: 100vh;
 	display: flex;
-	flex: 1 0 auto;
+  flex: 1 0 auto;
+
+  
 }
 
 .main-landing {
@@ -230,8 +232,26 @@ a {
   transform: translateZ(3px) scale(1);
 
   @media screen and (max-width: 768px) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url('../../assets/images/shan-kenny-mobile.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background: url("../../assets/images/shan-kenny-mobile.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+
+    &:before {
+      content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right,#000000,#000000);
+    opacity: .3; 
+    }
   }
 
   .main-landing-content {
@@ -327,7 +347,30 @@ a {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-	transform: translateZ(3px) scale(1.08);
+  transform: translateZ(3px) scale(1.08);
+
+  @media screen and (max-width: 768px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background: url("../../assets/images/shan-kenny-sitting.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+
+    &:before {
+      content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right,#000000,#000000);
+    opacity: .3; 
+    }
+  }
 }
 
 .hands-section {
@@ -340,7 +383,30 @@ a {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-	transform: translateZ(3px) scale(1.08);
+  transform: translateZ(3px) scale(1.08);
+
+  @media screen and (max-width: 768px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background: url("../../assets/images/shan-kenny-photo-hands.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+
+    &:before {
+      content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right,#000000,#000000);
+    opacity: .3; 
+    }
+  }
 }
 
 .center-paralax-text {
@@ -354,7 +420,7 @@ a {
     text-transform: uppercase;
  
     @media screen and (max-width: 768px){
-      font-size: 60px;
+      font-size: 55px;
     }
   }
 
@@ -394,6 +460,11 @@ a {
     padding-bottom: 24px;
     letter-spacing: -1px;
     font-weight: 900;
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      letter-spacing: -3px;
+    }
   }
   p {
     text-transform: none;
@@ -409,4 +480,54 @@ a {
     list-style: none;
     line-height: 2;
   }
+}
+
+.modal.fade .modal-dialog {
+  opacity: 0;
+  -webkit-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+     -o-transform: scale(0.1);
+      transform: scale(0.1);
+  -webkit-transition: all 0.3s ease;
+     -moz-transition: all 0.3s ease;
+     -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+}
+
+.modal.fade.in .modal-dialog {
+  opacity: 1;
+  -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+     -o-transform: scale(1);
+      transform: scale(1);
+  -webkit-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+     -o-transform: translate3d(0%, 0, 0);
+      transform: translate3d(0%, 0, 0);
+}
+
+.modal-content {
+  border: none;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* DIALOG HEADER */
+.modal-header {
+  min-height: 16px;
+  padding: 24px;
+  border-bottom: none;
+}
+
+.modal-title {
+  font-weight: 500;
+  font-size: 22px;
+  font-family: 'Caslon';
+}
+
+.modal-body {
+  font-family: 'Modern-Regular';
+  font-size: 18px;
 }
