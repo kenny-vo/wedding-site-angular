@@ -19,6 +19,7 @@ import { HeaderComponent } from './header/header.component';
 import { FaqComponent } from './faq/faq.component';
 import { FooterComponent } from './footer/footer.component';
 import { PhotosKlComponent } from './photos-kl/photos-kl.component';
+import { hasProperty } from './contacts/property-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { PhotosKlComponent } from './photos-kl/photos-kl.component';
     ContactListComponent,
     ContactListklComponent,
     GrdFilterPipe,
+    hasProperty,
     PhotosComponent,
     HomeComponent,
     KlComponent,
