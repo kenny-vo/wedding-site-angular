@@ -51,6 +51,20 @@
   }
 }
 
+.matches {
+  display: none;
+}
+
+li.matches:first-child {
+  display: block;
+  border: none;
+  text-align: left;
+  padding: 5px;
+  margin-top: 5px;
+  margin-left: 16px;
+  width: 80%;
+}
+
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }

@@ -6,11 +6,12 @@
     <div *ngIf="fullList == 1 && searchText !== undefined">
       <ul class="list-group" *ngIf="searchText.length > 2">
         <li class="list-group-item" 
-          *ngFor="let contact of contacts | grdFilter: {name: searchText, email: searchText} ; let i=index;"
+          *ngFor="let contact of contacts | grdFilter: {name: searchText, email: searchText} | hasProperty ; let i=index;"
           (click)="selectContact(contact)"
           [class.active]="contact === selectedContact" >
-            {{contact.name}}
-        </li >
+            <span>{{contact.name}}</span>
+        </li>
+        <li class="matches">No Matches</li>
       </ul>
       <button class="button" (click)="createNewContact()">Add New Entry</button>
     </div>
