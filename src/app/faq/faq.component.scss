@@ -28,8 +28,14 @@
 h2 {
   font-family: 'Caslon';
 }
+
 a {
   color: inherit;
+  text-decoration: underline;
+
+  &:hover {
+    color: brown;
+  }
 }
 
 /*Navigation Bar*/

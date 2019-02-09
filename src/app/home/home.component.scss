@@ -52,6 +52,15 @@ p {
 	font-size: 22px;
   font-family: 'Modern-Regular';
   text-transform: lowercase;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  
+    &:hover {
+      color: brown;
+    }
+  }
 }
 
 a {
