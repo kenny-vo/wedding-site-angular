@@ -488,6 +488,7 @@ a {
 
 .img-container {
   position: relative;
+  padding: 0px;
 
   .img-overlay {
     position: absolute;
@@ -500,7 +501,7 @@ a {
   }
   .text-box {
     position: relative;
-    top: 40%;
+    top: 30%;
     h2 {
       color: #fff;
       margin: 0px;
@@ -534,16 +535,16 @@ a {
 
 
 .text-container {
-  padding: 15% 0 0 0;
+  padding: 10% 0 0 0;
 
   .text-box {
     position: relative;
-    top: 40%;
     padding: 15px;
 
     h2 {
       color: #000;
       margin: 0px;
+      padding-bottom: 20px;
     }
     p {
       color: #000;
