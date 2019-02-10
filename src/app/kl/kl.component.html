@@ -89,14 +89,48 @@
     <p style="padding-bottom: 30px;">
       Our wedding venue is located <a href="https://goo.gl/maps/bRYfhiR5MGS2">here</a>, in the heart of Kuala Lumpur.
     </p>
+    <!-- Hotel Square -->
     <div class="row color-square-1">
-      <div class="col-lg-6 col-md-6 col-sm-6  text-container">
+      <div class="col-sm-6  text-container">
         <div class="text-box">
-            <h2>Hotel</h2>
-            <p>We suggest the Concorde Hotel for convenience and special discounted rates.</p>
+          <h2>Hotel</h2>
+          <p>Concorde Hotel<br/>
+              Suggested for convenience and special wedding rates
+          </p>
+          <a class="button" data-toggle="modal" data-target="#hotelRates">See Special Rates</a>
+          <p style="padding-top: 10px;"><a  style="padding-top: 10px;" href="mailto:koayvo@gmail.com" target="_blank">Contact us to book</a></p>
         </div>
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-6 img-container">
+      <!-- Hotel Rate Modal -->
+      <div class="modal fade" id="hotelRates" tabindex="-1" role="dialog" aria-labelledby="Hotel Rates Modal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Special Discounted Nightly Rates</h4>
+              </div>
+              <div class="modal-body hotel-modal-text">
+                <p><strong>Deluxe Room:</strong> RM300 <span style="font-size:16px;">(King or Twin Bed)</span></p>
+                <p><strong>Deluxe Family:</strong> RM390 <span style="font-size:16px;">(King and Twin Bed)</span></p>
+                <p><strong>Premier Room: </strong>RM390 <span style="font-size:16px;">(King or Twin Bed)</span></p>
+                <p><strong>Extra Bed: </strong>RM120 </p>
+                <br/>
+                <p>Buffet breakfast included for all rooms. <br/>Visit Concorde Hotel’s <a style="text-decoration: underline;" href="https://kualalumpur.concordehotelsresorts.com/accommodation" target="_blank">website</a> for more info on room types.</p>
+                <br/>
+                <strong><p>To book, please <a style="text-decoration: underline;" href="mailto:koayvo@gmail.com" target="_blank">email us</a> and include:</p></strong>
+                <ul>
+                  <li>Full name</li>
+                  <li>Check in and check out date</li>
+                  <li>Bed type</li>
+                  <li>Number of rooms requesting</li>
+                  <li>Name of person paying</li>
+                </ul> 
+                <sup>*Payment will be due at check in</sup>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="col-sm-6 img-container">
         <div class="img-overlay">
           <div class="text-box">
     
@@ -106,7 +140,7 @@
       </div>
     </div>
     <div class="row color-square-2">
-      <div class="col-lg-6 col-md-6 col-sm-6 img-container" >
+      <div class="col-sm-6 img-container" >
         <div class="img-overlay">
           <div class="text-box">
 
@@ -114,7 +148,8 @@
         </div>
         <img style="width: 100%;" src="./assets/images/airbnb.jpg">
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-6 text-container">
+      <!-- Airbnb Square -->
+      <div class="col-sm-6 text-container">
         <div class="text-box">
           <h2>Airbnb</h2>
           <p>Great for large groups or those  who want a more unique <br/>Austin experience. We suggest Downtown, South Congress, South Lamar, East Austin, and Zilker/Barton Springs.</p>
