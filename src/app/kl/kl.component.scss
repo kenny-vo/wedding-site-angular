@@ -234,7 +234,7 @@ p {
   position: relative;
   height: 10%;
   width: auto;
-	height: 79vh;
+	height: 90vh;
 	display: flex;
   flex: 1 0 auto;  
 }
@@ -242,7 +242,7 @@ p {
 
 .main-landing {
   background-image: url('../../assets/images/floralgraphic.png'), url('../../assets/images/floralborderbottom.png');
-  background-position: left top, center right;
+  background-position: left top, bottom right;
   background-color:#830512;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
