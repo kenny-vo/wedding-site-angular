@@ -52,10 +52,16 @@ p {
 	font-size: 22px;
   font-family: 'Modern-Regular';
   text-transform: lowercase;
-}
 
-a {
-  color: inherit;
+  a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:hover {
+      color: darkgreen;
+    }
+  }
+
 }
 
 
@@ -429,9 +435,18 @@ a {
 
 }
 
-.home-info, .home-travel, .home-city {
+.home-travel, .home-city {
 	padding-top: 90px;
 	padding-bottom: 140px;
+}
+
+.home-info {
+	padding-top: 90px;
+  padding-bottom: 140px;
+  
+  a {
+    text-decoration: none;
+  }
 }
 
 .home-info-header {
@@ -563,6 +578,7 @@ a {
 }
 
 .search-button {
+  color: black;
   border-radius: 0;
   background-color: transparent;
   border: 1px black solid;
