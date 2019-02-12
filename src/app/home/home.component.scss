@@ -208,6 +208,10 @@ a {
   padding: 5px 10px;
   border-radius: 5px;
   font-weight: 800;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: black;
@@ -326,6 +330,10 @@ a {
   font-family: 'Caslon';
   padding: 3px 45px 0px 45px;
   font-size: 18px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 
   &:hover, &:focus, &:active {
     background: white;
@@ -526,6 +534,10 @@ a {
       text-transform: uppercase;
       letter-spacing: -1px;
       color: #fff;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
 
       &:hover {
         color: #fff;
@@ -568,6 +580,10 @@ a {
       font-family: 'Futurist';
       text-transform: uppercase;
       letter-spacing: -1px;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
 
       &:hover {
         color: #fff;
@@ -590,6 +606,10 @@ a {
   text-transform: uppercase;
   letter-spacing: -1px;
   padding: 3px 8px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 
   &:hover {
     color: #fff;
