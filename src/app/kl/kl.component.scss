@@ -446,10 +446,16 @@ p {
 
 }
 
-.home-travel, .home-city {
+.home-city {
 	padding-top: 90px;
 	padding-bottom: 140px;
 }
+
+.home-travel, {
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+
 
 .home-info {
 	padding-top: 90px;
@@ -572,7 +578,7 @@ p {
 
 
 .text-container {
-  padding: 10% 0 0 0;
+  padding: 8% 0 0 0;
 
   .text-box {
     position: relative;
@@ -702,4 +708,16 @@ p {
     padding: 0px;
     font-size: 20px;
   }
+}
+
+
+.footer {
+  border-top: 1px solid lightgrey;
+}
+
+.footer p {
+  font-size: 12px;
+  font-family: 'Futurist';
+  text-transform: uppercase;
+  margin-top: 10px;
 }
