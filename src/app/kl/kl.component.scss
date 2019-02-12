@@ -444,16 +444,22 @@ p {
 	padding-top: 90px;
   padding-bottom: 140px;
   
+  p {
+    text-transform: capitalize;
+  }
+  
+  .home-info-header {
+    font-family: 'Modern-Regular';
+    font-size: 30px;
+    text-transform: none;
+  }
+
   a {
     text-decoration: none;
+    text-transform: capitalize;
   }
 }
 
-.home-info-header {
-  font-family: 'Modern-Regular';
-  font-size: 30px;
-  text-transform: none;
-}
 
 .home-program {
   padding-top: 90px;
