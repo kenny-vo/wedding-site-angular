@@ -58,7 +58,7 @@ p {
     text-decoration: underline;
   
     &:hover {
-      color: brown;
+      color: darkgreen;
     }
   }
 }
@@ -435,9 +435,18 @@ a {
 
 }
 
-.home-info, .home-city {
+.home-city {
 	padding-top: 90px;
 	padding-bottom: 140px;
+}
+
+.home-info {
+	padding-top: 90px;
+  padding-bottom: 140px;
+  
+  a {
+    text-decoration: none;
+  }
 }
 
 .home-travel {
