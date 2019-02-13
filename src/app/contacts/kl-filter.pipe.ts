@@ -12,7 +12,6 @@ export class KlFilterPipe implements PipeTransform {
   }
 
   applyFilter(contact: Contact, filter: Contact): boolean {
-    console.log('klFilter')
     if (contact.kl === 'TRUE') {
       return false;
     }
