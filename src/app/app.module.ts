@@ -21,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PhotosKlComponent } from './photos-kl/photos-kl.component';
 import { hasProperty } from './contacts/property-filter.pipe';
 import { KlFilterPipe } from './contacts/kl-filter.pipe';
+import { UsFilterPipe } from './contacts/us-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { KlFilterPipe } from './contacts/kl-filter.pipe';
     FaqComponent,
     FooterComponent,
     PhotosKlComponent,
-    KlFilterPipe
+    KlFilterPipe,
+    UsFilterPipe
   ],
   imports: [
     BrowserModule,
