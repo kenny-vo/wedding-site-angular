@@ -229,55 +229,59 @@ a {
 	height: 100vh;
 	display: flex;
   flex: 1 0 auto;
+}
 
-  
+.small-parallax {
+  position: relative;
+  height: 10%;
+  width: auto;
+	height: 90vh;
+	display: flex;
+  flex: 1 0 auto;  
 }
 
 .main-landing {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-  url('../../assets/images/shan-kenny-walking.jpg');
-	background-attachment: fixed;
+  background-image: url('../../assets/images/flowerborder1.png');
+  background-size: 100%;
+  background-position: 50% 85%;
+  background-color: #152c27;  
+  background-attachment: fixed;
 	background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   transform: translateZ(3px) scale(1);
 
-  @media screen and (max-width: 768px) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-    background: url("../../assets/images/shan-kenny-mobile.jpg");
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
+  // @media screen and (max-width: 768px) {
+  //   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  //   background: url("../../assets/images/shan-kenny-mobile.jpg");
+  //   background-size: cover;
+  //   -webkit-background-size: cover;
+  //   -moz-background-size: cover;
+  //   -o-background-size: cover;
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-attachment: scroll;
 
-    &:before {
-      content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(to bottom right,#000000,#000000);
-    opacity: .3; 
-    }
-  }
+  //   &:before {
+  //     content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   background-image: linear-gradient(to bottom right,#000000,#000000);
+  //   opacity: .3; 
+  //   }
+  // }
 
   .main-landing-content {
     position: relative;
-    text-align: left;
-    padding-left: 70%;
+    text-align: center;
   
     h1 {
       font-family: 'Caslon';
-      font-size: 8rem;
+      font-size: 7rem;
       font-weight: 400;
       color: #fff;
-      margin-top: 200px;
+      margin-top: 160px;
       margin-bottom: 0px;
     }
   
@@ -356,7 +360,7 @@ a {
 
 .sitting-section {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-	url('../../assets/images/shan-kenny-sitting.jpg');
+	url('../../assets/images/shan-kenny-walking.jpg');
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -368,7 +372,7 @@ a {
 
   @media screen and (max-width: 768px) {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-    background: url("../../assets/images/shan-kenny-sitting.jpg");
+    background: url("../../assets/images/shan-kenny-walking.jpg");
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -392,7 +396,7 @@ a {
 
 .hands-section {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-	url('../../assets/images/shan-kenny-photo-hands.jpg');
+	url('../../assets/images/shan-kenny-sitting.jpg');
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -404,7 +408,7 @@ a {
 
   @media screen and (max-width: 768px) {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-    background: url("../../assets/images/shan-kenny-photo-hands.jpg");
+    background: url("../../assets/images/shan-kenny-sitting.jpg");
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -515,6 +519,16 @@ a {
     height: 100%;
     background: rgba(255, 255, 255, 0.6);
     color: #fff;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0);
+      cursor: pointer;
+    }
+
   }
   .text-box {
     position: relative;
