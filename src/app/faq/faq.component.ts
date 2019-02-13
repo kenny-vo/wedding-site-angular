@@ -11,6 +11,7 @@ export class FaqComponent implements OnInit {
   constructor(@Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit() {
+    window.scroll(0,0);
   }
   
   @HostListener('window:scroll', [])
