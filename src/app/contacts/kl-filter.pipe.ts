@@ -12,7 +12,7 @@ export class KlFilterPipe implements PipeTransform {
   }
 
   applyFilter(contact: Contact, filter: Contact): boolean {
-    if (contact.kl === false) {
+    if (contact.kl === 'FALSE') {
       return false;
     }
     return true;

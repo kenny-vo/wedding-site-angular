@@ -8,5 +8,5 @@ export class Contact {
   guest_name: string;
   dietary: string;
   comment: string;
-  kl: boolean;
+  kl: string;
 }
