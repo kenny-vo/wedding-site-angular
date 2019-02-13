@@ -24,6 +24,10 @@ app.get('/photos', function(req, res){
   res.sendFile(__dirname + '/dist/index.html');
 });
 
+app.get('/photos-kl', function(req, res){
+  res.sendFile(__dirname + '/dist/index.html');
+});
+
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
 var db;
 
