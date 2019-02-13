@@ -34,6 +34,7 @@ export class PhotosKlComponent implements OnInit {
   }
 
   ngOnInit() {
+    window.scroll(0,0);
   }
 
   open(index: number): void {
