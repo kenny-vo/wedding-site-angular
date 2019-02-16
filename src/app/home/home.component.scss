@@ -495,7 +495,7 @@ a {
   position: relative;
   padding: 0px;
 
-  @media screen and (max-width: 778px) {
+  @media screen and (max-width: 991px) {
     display: none;
   }
 
@@ -569,13 +569,20 @@ a {
 .text-container {
   padding: 10% 0 0 0;
 
+  @media screen and (max-width: 1111px) {
+    padding: 8% 0 0 0;
+  } 
+
+  @media screen and (max-width: 991px) {
+    padding: 7% 0 4% 0;
+  } 
+
   .text-box {
     position: relative;
     padding: 15px;
 
     @media screen and (max-width: 768px) {
       padding: 30px;
-
     }
 
     h2 {
@@ -585,6 +592,11 @@ a {
     }
     p {
       color: #000;
+      font-size: 20px;
+
+      @media screen and (max-width: 878px) {
+        font-size: 18px;
+      } 
     }
 
     .button {
