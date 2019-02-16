@@ -249,28 +249,23 @@ a {
 	background-repeat: no-repeat;
   transform: translateZ(3px) scale(1);
 
-  // @media screen and (max-width: 768px) {
-  //   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-  //   background: url("../../assets/images/shan-kenny-mobile.jpg");
-  //   background-size: cover;
-  //   -webkit-background-size: cover;
-  //   -moz-background-size: cover;
-  //   -o-background-size: cover;
-  //   background-position: center;
-  //   background-repeat: no-repeat;
-  //   background-attachment: scroll;
+  @media screen and (max-width: 768px) {
+    background-size: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
 
-  //   &:before {
-  //     content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   background-image: linear-gradient(to bottom right,#000000,#000000);
-  //   opacity: .3; 
-  //   }
-  // }
+    &:before {
+      content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right,#000000,#000000);
+    opacity: .3; 
+    }
+  }
 
   .main-landing-content {
     position: relative;
@@ -309,7 +304,7 @@ a {
 
       h1 {
         font-size: 7rem;
-        margin-top: 350px;
+        margin-top: 150px;
         line-height: 1;
       }
     }
