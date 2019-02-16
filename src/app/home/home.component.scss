@@ -241,7 +241,7 @@ a {
 }
 
 .main-landing {
-  background-image: url('../../assets/images/flowerborder1.png');
+  background-image: url('../../assets/images/flowerborder.png');
   background-size: 100%;
   background-position: 50% 85%;
   background-color: #152c27;  
@@ -254,23 +254,12 @@ a {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-attachment: scroll;
-
-    &:before {
-      content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(to bottom right,#000000,#000000);
-    opacity: .3; 
-    }
   }
 
   .main-landing-content {
     position: relative;
     text-align: center;
-  
+
     h1 {
       font-family: 'Caslon';
       font-size: 7rem;
