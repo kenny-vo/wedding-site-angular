@@ -189,6 +189,7 @@ a {
     background-position: 0 100%;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    transform: none;
   }
 
   @media screen and (max-width: 500px) {
@@ -196,6 +197,7 @@ a {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    transform: none;
   }
 }
 
@@ -232,12 +234,9 @@ a {
 
   @media(max-width:768px) {
     padding-top: 105%;
+    transform: none;
   }
 
-  @media(max-width:450px) {
-    padding-top: 80%;
-  }
-  
   p {
     color: white;
     font-size: 60px;

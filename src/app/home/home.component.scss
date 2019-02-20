@@ -254,6 +254,7 @@ a {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    transform: none;
   }
 
   .main-landing-content {
@@ -364,6 +365,7 @@ a {
     -o-background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    transform: none;
 
     &:before {
       content: '';
@@ -400,6 +402,7 @@ a {
     -o-background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    transform: none;
 
     &:before {
       content: '';

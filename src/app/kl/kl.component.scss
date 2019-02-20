@@ -429,6 +429,7 @@ p {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    transform: none;
 
     &:before {
       content: '';
