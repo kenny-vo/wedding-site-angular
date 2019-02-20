@@ -457,6 +457,11 @@ a {
   font-family: 'Modern-Regular';
   font-size: 30px;
   text-transform: none;
+
+  @media(max-width:768px) {
+    font-size: 22px;
+
+  }
 }
 
 .home-program {
