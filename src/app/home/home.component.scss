@@ -442,6 +442,10 @@ a {
 .home-info {
 	padding-top: 90px;
   padding-bottom: 140px;
+
+  @media(max-width:768px) {
+    padding-bottom: 90px;
+  }
   
   a {
     text-decoration: none;
@@ -460,7 +464,6 @@ a {
 
   @media(max-width:768px) {
     font-size: 22px;
-
   }
 }
 
