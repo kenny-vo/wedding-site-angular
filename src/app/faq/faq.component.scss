@@ -231,9 +231,13 @@ a {
   letter-spacing: 5px;
 
   @media(max-width:768px) {
-    padding-top: 200%;
+    padding-top: 105%;
   }
 
+  @media(max-width:450px) {
+    padding-top: 80%;
+  }
+  
   p {
     color: white;
     font-size: 60px;

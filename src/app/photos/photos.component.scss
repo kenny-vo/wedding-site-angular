@@ -109,6 +109,10 @@ a {
     padding-top: 105%;
   }
 
+  @media(max-width:450px) {
+    padding-top: 80%;
+  }
+
   p {
     color: white;
     font-size: 60px;
