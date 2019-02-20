@@ -481,6 +481,10 @@ p {
 .home-info {
 	padding-top: 90px;
   padding-bottom: 140px;
+
+  @media(max-width:768px) {
+    padding-bottom: 90px;
+  }
   
   p {
     text-transform: capitalize;
