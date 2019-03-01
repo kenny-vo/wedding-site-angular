@@ -145,9 +145,6 @@ p {
 
 }
 
-.navbar-right > li:last-child {
-	padding-right: 10px;
-}
 
 .navbar-header .navbar-brand {
   color: #fff;
@@ -253,6 +250,7 @@ p {
     background-position: 0% 0%, 106% 111%;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    transform: none;
 
     &:before {
       content: '';
@@ -393,6 +391,7 @@ p {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    transform: none;
 
     &:before {
       content: '';
@@ -429,6 +428,7 @@ p {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    transform: none;
 
     &:before {
       content: '';
@@ -478,6 +478,10 @@ p {
 .home-info {
 	padding-top: 90px;
   padding-bottom: 140px;
+
+  @media(max-width:768px) {
+    padding-bottom: 90px;
+  }
   
   p {
     text-transform: capitalize;

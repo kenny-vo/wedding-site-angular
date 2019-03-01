@@ -254,6 +254,7 @@ a {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    transform: none;
   }
 
   .main-landing-content {
@@ -364,6 +365,7 @@ a {
     -o-background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    transform: none;
 
     &:before {
       content: '';
@@ -400,6 +402,7 @@ a {
     -o-background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    transform: none;
 
     &:before {
       content: '';
@@ -439,6 +442,10 @@ a {
 .home-info {
 	padding-top: 90px;
   padding-bottom: 140px;
+
+  @media(max-width:768px) {
+    padding-bottom: 90px;
+  }
   
   a {
     text-decoration: none;
@@ -454,6 +461,10 @@ a {
   font-family: 'Modern-Regular';
   font-size: 30px;
   text-transform: none;
+
+  @media(max-width:768px) {
+    font-size: 22px;
+  }
 }
 
 .home-program {
