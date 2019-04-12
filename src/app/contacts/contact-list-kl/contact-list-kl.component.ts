@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Contact } from '../contact';
 import { ContactService } from '../contact.service';
+import * as emailjs from 'emailjs-com';
 
 @Component({
   selector: 'contact-list-kl',
@@ -82,6 +83,7 @@ export class ContactListklComponent implements OnInit {
     this.selectContact(contact);
     this.selectedContact = null;
     this.rsvp_sent = 1;
+    emailjs.sendForm('contact_service','wedding_rsvp', '#contact-form', 'user_bf18asTQivHdi3ZB94vGG')
     return this.contacts;
   }
 
@@ -94,6 +96,7 @@ export class ContactListklComponent implements OnInit {
     this.fullList = 0;
     this.selectedContact = null;
     this.rsvp_sent = 1;
+    emailjs.sendForm('contact_service','wedding_rsvp', '#contact-form', 'user_bf18asTQivHdi3ZB94vGG')
     console.log('thanks for the RSVP!')
     return this.contacts;
   }

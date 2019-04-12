@@ -5,7 +5,7 @@
   </div>
 </div>
 <div *ngIf="contact" class="row">
-  <form class="col-md-12">
+  <form class="col-md-12" id="contact-form">
     <div class="row">
       <div class="col-sm-6">
         <div class="form-group">
@@ -34,7 +34,7 @@
         <small id="guestHelp" class="form-text text-muted">We have reserved {{contact.allowed_guests}} guest(s) for you</small>
       </div>
       <div class="form-group" *ngIf="contact.rsvp == 'Accept' && contact.allowed_guests > 0">
-        <label for="contact-guests_name">Guest Name(s)</label>
+        <label for="contact-guest_name">Guest Name(s)</label>
         <input class="form-control" name="contact-guest_name" [(ngModel)]="contact.guest_name" placeholder="Please enter full name"/>
         <small *ngIf="contact.allowed_guests > 1" id="guestHelp" class="form-text text-muted">Please seperate names with commas</small>
       </div>
