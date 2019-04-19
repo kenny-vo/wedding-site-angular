@@ -57,17 +57,39 @@ a {
 }
 
 .photo-landing {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-  url('../../assets/images/shan-kenny-hands.jpg');
+  background-image: url('../../assets/images/cornerfloralborder.png');
+  background-color: #152c27;  
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-size: cover;
+  background-size: 42%;
+  background-position: 0 37%;
   transform: translateZ(3px) scale(1);
 
-  @media(max-width:1024px) {
-    background-position: bottom;
+  @media(max-width:1200px) {
+    background-position: 0 40%;
   }
-  @media(max-width:768px) {
+
+  @media(max-width:1111px) {
+    background-position: 0 45%;
+  }
+  
+  @media(max-width:1024px) {
+    background-size: 50%;
+    background-position: 0 45%;  
+  }
+
+  @media screen and (max-width: 990px) {
+    background-size: 60%;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    transform: none;
+  }
+
+  @media screen and (max-width: 500px) {
+    background-size: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
     background-attachment: scroll;
     transform: none;
   }
@@ -76,25 +98,37 @@ a {
 .parallax {
 	position: relative;
 	width: 100%;
-	height: 90vh;
+	height: 60vh;
 	display: flex;
 	flex: 1 0 auto;
 }
+
 .center-paralax-text {
-  padding-top: 48%;
+  padding-top: 27%;
+  letter-spacing: 5px;
+
+  @media(max-width:768px) {
+    padding-top: 105%;
+  }
+
+  @media(max-width:450px) {
+    padding-top: 70%;
+  }
 
   p {
     color: white;
-    font-size: 70px;
+    font-size: 60px;
     font-weight: 300px;
     line-height: 1em;
     text-transform: uppercase;
-  }
+    font-family: 'Caslon';
 
-  @media(max-width:768px) {
-    padding-top: 100%;
+    @media(max-width:768px) {
+      font-size: 50px;
+    }
   }
 }
+
 
 .button {
   background-color: #315684;
@@ -140,7 +174,7 @@ a {
   background-color: #fff !important;
   transition: background-color 500ms linear;
   border-bottom: 1px solid rgba(0,0,0,.1);
-
+  
   a {
     color: black !important;
     transition: background-color 500ms;
@@ -154,7 +188,7 @@ a {
   margin-left: -47px !important;
   display: block;
   color: #fff;
-
+  
   @media screen and (max-width: 768px) {
     color: black !important;
   }
@@ -226,7 +260,7 @@ a {
   -moz-animation:fadeIn ease-in 1;
   animation:fadeIn ease-in 1;
 
-  -webkit-animation-fill-mode:forwards;
+  -webkit-animation-fill-mode:forwards; 
   -moz-animation-fill-mode:forwards;
   animation-fill-mode:forwards;
 
@@ -276,18 +310,6 @@ a {
   }
 }
 
-// .img-frame {
-//   margin: 10px;
-//   border: 5px solid #fff;
-//   cursor: pointer;
-//   -webkit-transition-duration: 0.3s;
-//   transition-duration: 0.3s;
-//   -webkit-transition-property: transform;
-//   transition-property: transform;
-// }
-.photo-container {
-  // margin-top: 50px;
-}
 .photo {
   line-height: 0;
   -webkit-column-count: 3;
@@ -295,7 +317,11 @@ a {
   -moz-column-count:    3;
   -moz-column-gap:      0px;
   column-count:         3;
-  column-gap:           0px;
+  column-gap:           0px; 
+  
+  @media(min-width: 1200px) {
+    height: 1350px !important;
+  }
 
   img {
     width: 100% !important;
@@ -303,19 +329,17 @@ a {
     padding: 10px;
 
   }
-
+  
   @media (max-width: 1000px) {
-
     -moz-column-count:    2;
     -webkit-column-count: 2;
     column-count:         2;
-
+    
   }
   @media (max-width: 800px) {
-
     -moz-column-count:    1;
     -webkit-column-count: 1;
     column-count:         1;
-
+    
 }
 }

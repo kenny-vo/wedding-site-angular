@@ -317,7 +317,11 @@ a {
   -moz-column-count:    3;
   -moz-column-gap:      0px;
   column-count:         3;
-  column-gap:           0px;  
+  column-gap:           0px; 
+  
+  @media(min-width: 1200px) {
+    height: 1350px !important;
+  }
 
   img {
     width: 100% !important;
