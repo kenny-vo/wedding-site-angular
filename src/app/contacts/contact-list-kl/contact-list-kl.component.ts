@@ -61,7 +61,8 @@ export class ContactListklComponent implements OnInit {
       guest_name: '',
       dietary: '',
       comment: '',
-      kl: 'TRUE'
+      kl: 'TRUE',
+      cookout: ''
     };
 
     // By default, a newly-created contact will have the selected state.

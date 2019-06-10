@@ -9,4 +9,5 @@ export class Contact {
   dietary: string;
   comment: string;
   kl: string;
+  cookout: string;
 }

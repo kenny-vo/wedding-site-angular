@@ -26,7 +26,7 @@
           <option [ngValue]="undefined" disabled selected>Select One</option>
           <option>Accept</option>
           <option>Decline</option>
-        </select>     
+        </select>
       </div>
       <div class="form-group" *ngIf="contact.rsvp == 'Accept' && contact.allowed_guests > 0">
         <label for="contact-guests">Number Attending? </label>
@@ -47,9 +47,17 @@
         </select>
         <small id="dietaryHelp" class="form-text text-muted">If yes, please comment below.</small>
       </div>
+      <div class="form-group" *ngIf="contact.rsvp == 'Accept' && contact.kl == FALSE">
+        <label for="contact-dietary">Will you be attending the Saturday cookout?</label>
+        <select [(ngModel)]="contact.cookout" class="form-control" name="contact-cookout" aria-placeholder="Select One" required>
+          <option [ngValue]="undefined" disabled selected>Select One</option>
+          <option>No</option>
+          <option>Yes</option>
+        </select>
+      </div>
       <div class="form-group" *ngIf="contact.rsvp == 'Accept'">
         <label for="contact-comment">Comments</label>
-        <textarea type="text" rows="2" maxlength="200" class="form-control" name="contact-comment" [(ngModel)]="contact.comment" placeholder="Let us know if dietary restrictions"></textarea>
+        <textarea type="text" rows="2" maxlength="200" class="form-control" name="contact-comment" [(ngModel)]="contact.comment"></textarea>
       </div>
     <button class="button" *ngIf="!contact._id" (click)="createContact(contact)">Submit</button>
     <button class="button" *ngIf="contact._id" (click)="updateContact(contact, contact._id)">Submit</button>
