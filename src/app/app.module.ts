@@ -23,6 +23,7 @@ import { GrdFilterPipe } from './contacts/grd-filter.pipe';
 import { hasProperty } from './contacts/property-filter.pipe';
 import { KlFilterPipe } from './contacts/kl-filter.pipe';
 import { UsFilterPipe } from './contacts/us-filter.pipe';
+import { GiftsComponent } from './gifts/gifts.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { UsFilterPipe } from './contacts/us-filter.pipe';
     FooterComponent,
     PhotosKlComponent,
     KlFilterPipe,
-    UsFilterPipe
+    UsFilterPipe,
+    GiftsComponent
   ],
   imports: [
     BrowserModule,

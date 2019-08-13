@@ -1,0 +1,285 @@
+@font-face {
+  font-family: 'Caslon';
+  src: url('../../assets/fonts/casloncp-webfont.woff2') format('woff2'), url('../../assets/fonts/casloncp-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futurist';
+  src: url('../../assets/fonts/Futurist.woff') format('woff'), url('../../assets/fonts/Futurist.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Streetlight';
+  src: url('../../assets/fonts/streetlight.woff2') format('woff2'), url('../../assets/fonts/streetlight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Modern-Regular';
+  src: url('../../assets/fonts/Modern-Regular.woff2') format('woff2'), url('../../assets/fonts/Modern-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h2 {
+  font-family: 'Caslon';
+}
+
+a {
+  color: inherit;
+}
+
+/*Navigation Bar*/
+.grow:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.07);
+  -ms-transform: scale(1.07);
+  transform: scale(1.07);
+
+  @media screen and (max-width: 768px){
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+.navbar-default {
+	font-family: 'Futurist';
+	border-color: rgba(34,34,34,.05);
+  background-color: #fff;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+}
+
+/* Add styles to scrolled navbar*/
+.scrolled {
+  background-color: #fff !important;
+  transition: background-color 500ms linear;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+
+  a {
+    color: black !important;
+    transition: background-color 500ms;
+  }
+}
+
+/*Center Navbar Brand*/
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  margin-left: -47px !important;
+  display: block;
+  color: #fff;
+
+  @media screen and (max-width: 768px) {
+    color: black !important;
+  }
+
+}
+
+.navbar-right > li:last-child {
+	padding-right: 10px;
+}
+
+.navbar-header .navbar-brand {
+  color: #fff;
+}
+
+.navbar-default .nav > li>a,
+.navbar-default .nav>li>a:focus {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: black;
+
+  @media(max-width:768px) {
+    text-align: center;
+  }
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: #fff;
+
+  @media(max-width:768px) {
+    text-decoration: underline;
+  }
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+	color: #fff;
+}
+
+@media(min-width:768px) {
+  .navbar-default {
+		border: none;
+    background-color: transparent;
+  }
+
+  .navbar-default .nav > li>a,
+  .navbar-default .nav>li>a:focus {
+    color: #fff;
+  }
+
+  .navbar-default.affix {
+    border-color: rgba(34,34,34,.05);
+    background-color: #fff;
+  }
+
+  .navbar-default.affix .navbar-header .navbar-brand {
+    font-size: 14px;
+    color: #fff;
+  }
+}
+
+
+.button {
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 800;
+
+  &:hover {
+    background-color: #152c27;
+    color: white;
+    border: 1px solid #152c27;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+  }
+}
+
+.parallax {
+	position: relative;
+	width: 100%;
+	height: 60vh;
+	display: flex;
+	flex: 1 0 auto;
+}
+
+.faq-main-landing {
+  background-image: url('../../assets/images/cornerfloralborder.png');
+  background-color: #152c27;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+  background-size: 42%;
+  background-position: 0 37%;
+  transform: translateZ(3px) scale(1);
+
+  @media(max-width:1200px) {
+    background-position: 0 40%;
+  }
+
+  @media(max-width:1111px) {
+    background-position: 0 45%;
+  }
+
+  @media(max-width:1024px) {
+    background-size: 50%;
+    background-position: 0 45%;
+  }
+
+  @media screen and (max-width: 990px) {
+    background-size: 60%;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    transform: none;
+  }
+
+  @media screen and (max-width: 500px) {
+    background-size: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    transform: none;
+  }
+}
+
+.faq-info-section {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  h3 {
+    margin-bottom: 0px;
+    font-family: 'Caslon';
+  }
+
+  p {
+    line-height: 1.1;
+    letter-spacing: 1px;
+    font-size: 22px;
+    font-family: 'Modern-Regular';
+    padding-bottom: 20px;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+
+      &:hover {
+        color: #967C81;
+      }
+    }
+  }
+
+}
+
+.center-paralax-text {
+  padding-top: 24%;
+  letter-spacing: 5px;
+
+  @media(max-width:768px) {
+    padding-top: 105%;
+    transform: none;
+  }
+
+  p {
+    color: white;
+    font-size: 60px;
+    font-weight: 300px;
+    line-height: 1em;
+    text-transform: uppercase;
+    font-family: 'Caslon';
+
+    @media(max-width:768px) {
+      font-size: 50px;
+    }
+  }
+}
+
+
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay:1.2s;
+  animation-delay: 1.2s;
+}
