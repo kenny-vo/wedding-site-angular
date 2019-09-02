@@ -1,0 +1,325 @@
+@font-face {
+  font-family: 'Caslon';
+  src: url('../../assets/fonts/casloncp-webfont.woff2') format('woff2'), url('../../assets/fonts/casloncp-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futurist';
+  src: url('../../assets/fonts/Futurist.woff') format('woff'), url('../../assets/fonts/Futurist.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Streetlight';
+  src: url('../../assets/fonts/streetlight.woff2') format('woff2'), url('../../assets/fonts/streetlight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Modern-Regular';
+  src: url('../../assets/fonts/Modern-Regular.woff2') format('woff2'), url('../../assets/fonts/Modern-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Melinda';
+  src: url('../../assets/fonts/Melinda-script.woff2') format('woff2'), url('../../assets/fonts/Melinda-script.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h2 {
+  font-family: 'Caslon';
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-family: 'Caslon';
+  font-size: 30px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+p {
+	line-height: 1.2;
+	letter-spacing: 1px;
+	font-size: 22px;
+  font-family: 'Modern-Regular';
+  text-transform: lowercase;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:hover {
+      color: #967C81;
+    }
+  }
+}
+
+a {
+  color: inherit;
+}
+
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay:1.2s;
+  animation-delay: 1.2s;
+}
+
+/*Navigation Bar*/
+.grow:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.07);
+  -ms-transform: scale(1.07);
+  transform: scale(1.07);
+
+  @media screen and (max-width: 768px){
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+.navbar-default {
+	font-family: 'Futurist';
+	border-color: rgba(34,34,34,.05);
+  background-color: #fff;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+}
+
+/* Add styles to scrolled navbar*/
+.scrolled {
+  background-color: #fff !important;
+  transition: background-color 500ms linear;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+
+  a {
+    color: black !important;
+    transition: background-color 500ms;
+  }
+}
+
+/*Center Navbar Brand*/
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  margin-left: -47px !important;
+  display: block;
+  color: black !important;
+
+  @media screen and (max-width: 767px) {
+    color: black !important;
+  }
+
+}
+
+.navbar-right > li:last-child {
+	padding-right: 10px;
+}
+
+.navbar-header .navbar-brand {
+  color: black !important;
+}
+
+.navbar-default .nav > li>a,
+.navbar-default .nav>li>a:focus {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: black;
+
+  @media(max-width:768px) {
+    text-align: center;
+  }
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: black !important;
+
+  @media(max-width:768px) {
+    text-decoration: underline;
+  }
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: black !important;
+}
+
+@media(min-width:768px) {
+  .navbar-default {
+		border: none;
+    background-color: transparent;
+  }
+
+  .navbar-default .nav > li>a,
+  .navbar-default .nav>li>a:focus {
+    color: black !important;
+  }
+
+  .navbar-default.affix {
+    border-color: rgba(34,34,34,.05);
+    background-color: #fff;
+  }
+
+  .navbar-default.affix .navbar-header .navbar-brand {
+    font-size: 14px;
+    color: black !important;
+  }
+}
+
+.button {
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 800;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #152c27;
+    color: white;
+    border: 1px solid #152c27;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+  }
+}
+
+.search-button {
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px black solid;
+  font-family: 'Futurist';
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding: 3px 8px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: black !important;
+    background-color: #152c27;
+    text-decoration: none;
+  }
+}
+
+
+
+
+.modal.fade .modal-dialog {
+  opacity: 0;
+  -webkit-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+     -o-transform: scale(0.1);
+      transform: scale(0.1);
+  -webkit-transition: all 0.3s ease;
+     -moz-transition: all 0.3s ease;
+     -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+}
+
+.modal.fade.in .modal-dialog {
+  opacity: 1;
+  -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+     -o-transform: scale(1);
+      transform: scale(1);
+  -webkit-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+     -o-transform: translate3d(0%, 0, 0);
+      transform: translate3d(0%, 0, 0);
+}
+
+.modal-content {
+  border: none;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+}
+
+// Modals
+/* DIALOG HEADER */
+.modal-header {
+  min-height: 16px;
+  padding: 24px;
+  border-bottom: none;
+}
+
+.modal-title {
+  font-weight: 500;
+  font-size: 22px;
+  font-family: 'Caslon';
+}
+
+.modal-body {
+  font-family: 'Modern-Regular';
+  font-size: 18px;
+}
+
+.activity-list {
+  list-style-type: none;
+  text-align: left;
+  overflow-x: scroll;
+  height: 500px;
+
+  li {
+    padding: 10px 5px;
+  }
+}
+
+.map {
+  margin-top: 70px;
+}
+
+.google-places {
+  iframe {
+    width: 720px;
+    height: 560px;
+
+    @media(min-width:768px) {
+      width: 100%;
+      height: 500px;
+    }
+  }
+}

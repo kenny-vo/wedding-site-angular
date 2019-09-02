@@ -1,0 +1,59 @@
+<!-- US Homepage -->
+
+<!-- NAVIGATION -->
+<nav id="nav" class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand grow" (click)='scrollToElement(top)' >S&K</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-left">
+          <li><a class="grow" routerLink="/" fragment="info">RSVP</a></li>
+          <li><a class="grow" routerLink="/" fragment="info">Info</a></li>
+          <li><a class="grow" routerLink="/" fragment="program">Program</a></li>
+          <li><a class="grow" routerLink="/gifts">Gifts</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a class="grow" routerLink="/photos">Photos</a></li>
+          <li><a class="grow" routerLink="/" fragment="travel">Travel</a></li>
+          <li><a class="grow" routerLink="/todo">To-do</a></li>
+          <li><a class="grow" routerLink="/faq">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Main Landing-->
+
+
+<!-- City Guide Section -->
+<section class="map" id="city">
+  <div class="container">
+    <div class="row">
+      <div class="text-center home-city">
+        <h2>City Guide</h2>
+        <hr/>
+        <div class="row">
+          <!-- <div class="col-md-4 col-sm-12">
+            <h3>Our favorite things to do!</h3>
+            <br/>
+            <div>
+              <ul class="activity-list" *ngIf="markers">
+                <li *ngFor="let place of markers">{{place.name}}</li>
+              </ul>
+            </div>
+          </div> -->
+          <div class="col-md-12 col-sm-12 google-places">
+            <!-- <div #gmap style="width:100%;height:500px"></div> -->
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1VB_Wd-ht4TVLwFLu54h2JtKK6pgnT8cU"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

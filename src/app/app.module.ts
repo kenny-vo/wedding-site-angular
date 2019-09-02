@@ -24,6 +24,7 @@ import { hasProperty } from './contacts/property-filter.pipe';
 import { KlFilterPipe } from './contacts/kl-filter.pipe';
 import { UsFilterPipe } from './contacts/us-filter.pipe';
 import { GiftsComponent } from './gifts/gifts.component';
+import { MapsComponent } from './maps/maps.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { GiftsComponent } from './gifts/gifts.component';
     PhotosKlComponent,
     KlFilterPipe,
     UsFilterPipe,
-    GiftsComponent
+    GiftsComponent,
+    MapsComponent
   ],
   imports: [
     BrowserModule,

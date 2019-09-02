@@ -56,7 +56,7 @@ p {
   a {
     color: inherit;
     text-decoration: underline;
-  
+
     &:hover {
       color: #967C81;
     }
@@ -78,7 +78,7 @@ a {
   -moz-animation:fadeIn ease-in 1;
   animation:fadeIn ease-in 1;
 
-  -webkit-animation-fill-mode:forwards; 
+  -webkit-animation-fill-mode:forwards;
   -moz-animation-fill-mode:forwards;
   animation-fill-mode:forwards;
 
@@ -127,7 +127,7 @@ a {
   background-color: #fff !important;
   transition: background-color 500ms linear;
   border-bottom: 1px solid rgba(0,0,0,.1);
-  
+
   a {
     color: black !important;
     transition: background-color 500ms;
@@ -141,7 +141,7 @@ a {
   margin-left: -47px !important;
   display: block;
   color: #fff;
-  
+
   @media screen and (max-width: 767px) {
     color: black !important;
   }
@@ -237,14 +237,14 @@ a {
   width: auto;
 	height: 90vh;
 	display: flex;
-  flex: 1 0 auto;  
+  flex: 1 0 auto;
 }
 
 .main-landing {
   background-image: url('../../assets/images/flowerborder.png');
   background-size: 100%;
   background-position: 50% 85%;
-  background-color: #152c27;  
+  background-color: #152c27;
   background-attachment: fixed;
 	background-repeat: no-repeat;
   transform: translateZ(3px) scale(1);
@@ -269,7 +269,7 @@ a {
       margin-top: 160px;
       margin-bottom: 0px;
     }
-  
+
     h3 {
       color: #fff;
       font-weight: 400;
@@ -277,7 +277,7 @@ a {
       letter-spacing: 3px;
       margin-top: 0px;
     }
-    
+
     @media screen and (max-width: 768px) {
       padding-left: 0px;
       text-align: center;
@@ -375,7 +375,7 @@ a {
     bottom: 0;
     left: 0;
     background-image: linear-gradient(to bottom right,#000000,#000000);
-    opacity: .3; 
+    opacity: .3;
     }
   }
 }
@@ -412,7 +412,7 @@ a {
     bottom: 0;
     left: 0;
     background-image: linear-gradient(to bottom right,#000000,#000000);
-    opacity: .3; 
+    opacity: .3;
     }
   }
 }
@@ -427,7 +427,7 @@ a {
     line-height: 1em;
     text-transform: uppercase;
     font-family: 'Caslon';
- 
+
     @media screen and (max-width: 768px){
       font-size: 55px;
     }
@@ -446,7 +446,7 @@ a {
   @media(max-width:768px) {
     padding-bottom: 90px;
   }
-  
+
   a {
     text-decoration: none;
   }
@@ -506,7 +506,7 @@ a {
   position: relative;
   padding: 0px;
 
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 1081px) {
     display: none;
   }
 
@@ -531,7 +531,7 @@ a {
   }
   .text-box {
     position: relative;
-    top: 30%;
+    top: 25%;
 
     h2 {
       color: #fff;
@@ -541,7 +541,7 @@ a {
     p {
       color: #fff;
     }
-    
+
     .button {
       border-radius: 0;
       background-color: transparent;
@@ -565,32 +565,23 @@ a {
 }
 
 .color-square-1 {
-  // background-color: rgba(188,163,178, 0.4);
-  background-color: rgba(223, 212, 217, 0.4);
-
+  background-color: rgba(168, 74, 59, 0.6);
 }
-
-.color-square-2 {
-  // background-color: rgba(139, 135, 130, 0.4);
-  background-color: rgba(150, 124, 129, 0.4);
-
-}
-
 
 .text-container {
-  padding: 10% 0 0 0;
+  padding: 6% 0 0 0;
 
   @media screen and (max-width: 1111px) {
-    padding: 8% 0 0 0;
-  } 
+    padding: 5% 0 0 0;
+  }
 
   @media screen and (max-width: 991px) {
-    padding: 7% 0 4% 0;
-  } 
+    padding: 4% 0 4% 0;
+  }
 
   .text-box {
     position: relative;
-    padding: 15px;
+    padding: 75px;
 
     @media screen and (max-width: 768px) {
       padding: 30px;
@@ -607,7 +598,7 @@ a {
 
       @media screen and (max-width: 878px) {
         font-size: 18px;
-      } 
+      }
     }
 
     .button {
