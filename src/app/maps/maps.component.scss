@@ -312,6 +312,12 @@ a {
   margin-top: 70px;
 }
 
+.maps-text {
+  p {
+    text-transform: none;
+  }
+}
+
 .google-places {
   iframe {
     width: 720px;
