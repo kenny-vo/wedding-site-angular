@@ -1,0 +1,37 @@
+<div class="container guestbook-container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label>What city are you from?</label>
+        <input style="width: 300px;" type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
+      </div>
+      <h5>City: {{city}}</h5>
+      <button class="button" (click)="createNewMessage()">Create New Message</button>
+      <app-guestbook-details
+        [message]="selectedMessage"
+        [createHandlerMessage]="addMessage">
+      </app-guestbook-details>
+    </div>
+    <div class="map col-md-6">
+      <agm-map [zoom]="8.5" [latitude]="latitude" [longitude]="longitude">
+        <agm-marker 
+          *ngFor="let message of messages; let i = index"
+          [latitude]="message.lat"
+          [longitude]="message.long"
+          (markerClick)="clickedMarker(infoWindow)"
+        >
+          <agm-info-window
+            #infoWindow>
+            <h3>{{message.name}}</h3>
+            <strong>{{message.message}}</strong>
+          </agm-info-window>
+        </agm-marker>
+      </agm-map>
+    </div>
+    <div class="col-md-2">
+      <ul>
+        <li *ngFor="let message of messages;">{{message.message}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -48,7 +48,6 @@ export class ContactListComponent implements OnInit {
   selectContact(contact: Contact) {
     this.selectedContact = contact;
     this.searchText = undefined;
-
   }
 
   createNewContact() {

@@ -18,13 +18,18 @@ import { HeaderComponent } from './header/header.component';
 import { FaqComponent } from './faq/faq.component';
 import { FooterComponent } from './footer/footer.component';
 import { PhotosKlComponent } from './photos-kl/photos-kl.component';
+import { GiftsComponent } from './gifts/gifts.component';
+import { MapsComponent } from './maps/maps.component';
+import { GuestbookComponent } from './guestbook/guestbook.component';
+import { GuestbookDetailsComponent } from './guestbook-details/guestbook-details.component';
+import { GuestbookService } from './guestbook/guestbook.service';
 
 import { GrdFilterPipe } from './contacts/grd-filter.pipe';
 import { hasProperty } from './contacts/property-filter.pipe';
 import { KlFilterPipe } from './contacts/kl-filter.pipe';
 import { UsFilterPipe } from './contacts/us-filter.pipe';
-import { GiftsComponent } from './gifts/gifts.component';
-import { MapsComponent } from './maps/maps.component';
+
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -44,7 +49,9 @@ import { MapsComponent } from './maps/maps.component';
     KlFilterPipe,
     UsFilterPipe,
     GiftsComponent,
-    MapsComponent
+    MapsComponent,
+    GuestbookComponent,
+    GuestbookDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -52,9 +59,13 @@ import { MapsComponent } from './maps/maps.component';
     HttpModule,
     HttpClientModule,
     AppRoutingModule,
-    LightboxModule
+    LightboxModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyB3phgawKpT7S_0-vwzJQKbnTWA8UQWML8',
+      libraries: ['places']
+    })
   ],
-  providers: [],
+  providers: [GuestbookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

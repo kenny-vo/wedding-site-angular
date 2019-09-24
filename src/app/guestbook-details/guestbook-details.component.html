@@ -1,0 +1,13 @@
+<form *ngIf="message" id="message-form">
+  <div class="form-group">
+      <div class="form-group">
+        <label for="contact-name">Name</label>
+        <input class="form-control" name="contact-name" [(ngModel)]="message.name" placeholder="Your Name" required="true" />
+      </div>
+      <div class="form-group">
+        <label for="contact-comment">Message</label>
+        <textarea type="text" rows="2" maxlength="200" class="form-control" name="message-message" [(ngModel)]="message.message"></textarea>
+      </div>
+    </div>
+  <button class="button" (click)="createMessage(message)">Submit</button>
+</form>

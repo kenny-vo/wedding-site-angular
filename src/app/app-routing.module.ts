@@ -7,7 +7,7 @@ import { FaqComponent } from './faq/faq.component';
 import { PhotosKlComponent } from './photos-kl/photos-kl.component';
 import { GiftsComponent } from './gifts/gifts.component';
 import { MapsComponent } from './maps/maps.component';
-
+import { GuestbookComponent } from './guestbook/guestbook.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,7 +16,8 @@ const routes: Routes = [
   { path: 'faq', component: FaqComponent },
   { path: 'photos-kl', component: PhotosKlComponent},
   { path: 'gifts', component: GiftsComponent},
-  { path: 'todo', component: MapsComponent}
+  { path: 'todo', component: MapsComponent},
+  { path: 'guestbook', component: GuestbookComponent}
 
 ];
 

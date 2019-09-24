@@ -1,6 +1,5 @@
 import { Component, HostListener, Inject, OnInit, ViewChild } from '@angular/core';
 import { DOCUMENT } from "@angular/platform-browser";
-// import { } from '@types/googlemaps';
 
 @Component({
   selector: 'app-maps',
@@ -8,11 +7,6 @@ import { DOCUMENT } from "@angular/platform-browser";
   styleUrls: ['./maps.component.scss']
 })
 export class MapsComponent implements OnInit {
-  markers = [
-    { id: 1, name: 'Terry Blacks BBQ', lat: 30.262613, lng: -97.756022 },
-    { id: 2, name: 'Barton Springs', lat: 30.263895, lng: -97.770720 },
-  ];
-
   constructor(@Inject(DOCUMENT) private document: Document) { }
 
   // @ViewChild('gmap') gmapElement: any;
@@ -25,10 +19,10 @@ export class MapsComponent implements OnInit {
     //   mapTypeId: google.maps.MapTypeId.ROADMAP
     // };
 
-    var markers = [
-      { id: 1, name: 'Terry Blacks BBQ', lat: 30.262613, lng: -97.756022 },
-      { id: 2, name: 'Barton Springs', lat: 30.263895, lng: -97.770720 },
-    ]
+    // var markers = [
+    //   { id: 1, name: 'Terry Blacks BBQ', lat: 30.262613, lng: -97.756022 },
+    //   { id: 2, name: 'Barton Springs', lat: 30.263895, lng: -97.770720 },
+    // ]
 
 
     // this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
@@ -39,34 +33,34 @@ export class MapsComponent implements OnInit {
     // this.setMultipleMarker(markers, this);
   }
 
-  setMultipleMarker(markers, self) {
-    markers.forEach(function (marker) {
-      (function (marker) {
-        let mark = new google.maps.Marker({ position: new google.maps.LatLng(marker.lat, marker.lng) });
-        // infowindow.open(self.map, mark);
-        let number = 0;
+  // setMultipleMarker(markers, self) {
+  //   markers.forEach(function (marker) {
+  //     (function (marker) {
+  //       let mark = new google.maps.Marker({ position: new google.maps.LatLng(marker.lat, marker.lng) });
+  //       // infowindow.open(self.map, mark);
+  //       let number = 0;
 
-        mark.addListener('click', () => {
-          let infoWindow = new google.maps.InfoWindow({ content: marker.name });
-          // console.log(mark);
-          // console.log(infoWindow);
-          // console.log(number);
+  //       mark.addListener('click', () => {
+  //         let infoWindow = new google.maps.InfoWindow({ content: marker.name });
+  //         // console.log(mark);
+  //         // console.log(infoWindow);
+  //         // console.log(number);
 
-          if (number > 0) {
-            infoWindow.close();
-            console.log(number);
-          }
+  //         if (number > 0) {
+  //           infoWindow.close();
+  //           console.log(number);
+  //         }
 
-          if (number < 1) {
-            infoWindow.open(self.map, mark);
-            number = 1;
-            console.log(number);
-          }
-        });
-        mark.setMap(self.map);
-      })(marker)
-    })
-  }
+  //         if (number < 1) {
+  //           infoWindow.open(self.map, mark);
+  //           number = 1;
+  //           console.log(number);
+  //         }
+  //       });
+  //       mark.setMap(self.map);
+  //     })(marker)
+  //   })
+  // }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
