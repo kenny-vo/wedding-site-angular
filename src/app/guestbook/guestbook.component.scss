@@ -1,8 +1,86 @@
+@font-face {
+    font-family: 'Caslon';
+    src: url('../../assets/fonts/casloncp-webfont.woff2') format('woff2'), url('../../assets/fonts/casloncp-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futurist';
+    src: url('../../assets/fonts/Futurist.woff') format('woff'), url('../../assets/fonts/Futurist.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Streetlight';
+    src: url('../../assets/fonts/streetlight.woff2') format('woff2'), url('../../assets/fonts/streetlight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Modern-Regular';
+    src: url('../../assets/fonts/Modern-Regular.woff2') format('woff2'), url('../../assets/fonts/Modern-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Melinda';
+    src: url('../../assets/fonts/Melinda-script.woff2') format('woff2'), url('../../assets/fonts/Melinda-script.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .guestbook-container {
-    padding: 100px 0;
-    height: 100vh;
+    padding-top: 75px;
+
+    .form-group {
+        h2 {
+            font-family: 'Modern-Regular';
+            text-align: left;
+            margin-top: 0;
+            font-size: 30px;
+        }
+    }
+
+    h2 {
+        text-align: left;
+        margin-bottom: 2rem;
+        font-family: 'Modern-Regular';
+        font-size: 70px;
+    }
+
+    ul {
+        border-top: 2px solid lightgray;
+        margin: 50px 0 15px;
+        padding: 0;
+        height: 350px;
+        overflow: scroll;
+        background-color: #fff;
+    }
+    li {
+        list-style: none;
+        font-size: 16px;
+        text-transform: capitalize;
+        padding: 20px 5px;
+        border-bottom: 1px solid lightgray;
+        
+        .message {
+            font-family: 'Modern-Regular';
+        }
+
+        .city, .name {
+            font-family: 'Caslon';
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(168, 74, 59, 0.6);
+        }
+    }
 }
 
 agm-map {
-    height: 400px;
+    height: 535px;
 }

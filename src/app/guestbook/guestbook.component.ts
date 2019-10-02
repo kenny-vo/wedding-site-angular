@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, NgZone, Input } from '@angular/core';
-import { MapsAPILoader } from '@agm/core';
+import { MapsAPILoader, AgmMap } from '@agm/core';
 import { Message } from './message';
 import { GuestbookService } from './guestbook.service';
 
@@ -14,6 +14,7 @@ export class GuestbookComponent implements OnInit {
   title = 'Guestbook';
   latitude = 30.274198;
   longitude = -97.740489;
+  zoom: number;
   city: string;
   private geoCoder;
   selectedMessage: Message
@@ -22,12 +23,14 @@ export class GuestbookComponent implements OnInit {
   @ViewChild('search')
   public searchElementRef: ElementRef;
 
+  @ViewChild(AgmMap)
+  public agmMap: AgmMap
+
   messages: Message[];
 
   constructor(private mapsAPILoader: MapsAPILoader, private ngZone: NgZone, private guestbookService: GuestbookService) { }
 
   ngOnInit() {
-    console.log(this.previous);
     this.mapsAPILoader.load().then(() => {
       const autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
         types: ["(regions)"]
@@ -50,10 +53,8 @@ export class GuestbookComponent implements OnInit {
       });
     });
 
-    // Get these later for lat / long  ->markers
     this.guestbookService.getMessages().then((messages: Message[]) => {
       this.messages = messages.map((message) => {
-        // console.log(message);
         return message;
       })
     })
@@ -87,6 +88,11 @@ export class GuestbookComponent implements OnInit {
     this.selectMessage(message);
     this.selectedMessage = null;
     return this.messages;
+    this.guestbookService.getMessages().then((messages: Message[]) => {
+      this.messages = messages.map((message) => {
+        return message;
+      });
+    });
   }
 
   // Get Current Location Coordinates
@@ -111,9 +117,17 @@ export class GuestbookComponent implements OnInit {
   }
 
   clickedMarker(infoWindow) {
+    console.log(infoWindow._id);
     if (this.previous) {
       this.previous.close();
     }
     this.previous = infoWindow;
+  }
+
+  listClick(message) {
+    this.latitude = message.lat;
+    this.longitude = message.long;
+    this.zoom = 4;
+    this.agmMap.triggerResize();
   }
 }
