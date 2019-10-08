@@ -1,0 +1,35 @@
+#message-form {
+
+  label {
+    color: #fff;
+  }
+
+  margin-top: 5px;
+  position: absolute;
+  width: 360px;
+  height: 400px;
+  padding: 16px;
+  background: #152c27;
+}
+
+.button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 800;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: white;
+    color: black;
+    border: none;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+  }
+}

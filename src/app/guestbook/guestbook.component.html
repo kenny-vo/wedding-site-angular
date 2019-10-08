@@ -9,12 +9,16 @@
               *ngFor="let message of messages; let i = index"
               [latitude]="message.lat"
               [longitude]="message.long"
+              [iconUrl]="{url: '../assets/images/love.png',         scaledSize: {
+                width: 23,
+                height: 25
+            }}"
               (markerClick)="clickedMarker(infoWindow)"
             >
               <agm-info-window
                 #infoWindow>
-                <h3>{{message.name}}</h3>
-                <strong>{{message.message}}</strong>
+                <p class="message-name">{{message.name}}</p>
+                <p class="message-text">{{message.message}}</p>
               </agm-info-window>
             </agm-marker>
           </agm-map>
@@ -23,11 +27,12 @@
     <div class="col-md-4">
       <div class="form-group">
         <h2>Please leave us a message:</h2>
-        <label>What city are you from?</label>
-        <input style="width: 300px;" type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
+        <label>Search for your city!</label>
+        <input style="width: 300px;" type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
       </div>
       <!-- <h5>City: {{city}}</h5> -->
-      <button class="button" (click)="createNewMessage()">Create New Message</button>
+      <button class="button messageButton" #messagebutton (click)="createNewMessage()">Write us something</button> 
+      <p class="city-helper-text" *ngIf="selectedCity">Search and click on a city first!</p>
       <app-guestbook-details
         [message]="selectedMessage"
         [createHandlerMessage]="addMessage">

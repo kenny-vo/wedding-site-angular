@@ -24,6 +24,7 @@ export class GuestbookDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
+    
   }
 
 }

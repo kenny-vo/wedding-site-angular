@@ -17,8 +17,10 @@ export class GuestbookComponent implements OnInit {
   zoom: number;
   city: string;
   private geoCoder;
-  selectedMessage: Message
+  selectedMessage: Message;
   previous;
+
+  selectedCity: boolean;
 
   @ViewChild('search')
   public searchElementRef: ElementRef;
@@ -81,29 +83,24 @@ export class GuestbookComponent implements OnInit {
 
     // By default, a newly-created contact will have the selected state.
     this.selectMessage(message);
+
+    if (!message.city) {
+      this.selectedCity = true;
+    }
   }
 
   addMessage = (message: Message) => {
     this.messages.push(message);
     this.selectMessage(message);
     this.selectedMessage = null;
+    this.selectedCity = null;
+
     return this.messages;
     this.guestbookService.getMessages().then((messages: Message[]) => {
       this.messages = messages.map((message) => {
         return message;
       });
     });
-  }
-
-  // Get Current Location Coordinates
-  private setCurrentLocation() {
-    if ('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        this.latitude = position.coords.latitude;
-        this.longitude = position.coords.longitude;
-        this.getAddress(this.latitude, this.longitude);
-      });
-    }
   }
 
   getAddress(latitude, longitude) {
@@ -117,7 +114,6 @@ export class GuestbookComponent implements OnInit {
   }
 
   clickedMarker(infoWindow) {
-    console.log(infoWindow._id);
     if (this.previous) {
       this.previous.close();
     }
