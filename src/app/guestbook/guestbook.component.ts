@@ -14,12 +14,12 @@ export class GuestbookComponent implements OnInit {
   title = 'Guestbook';
   latitude = 30.274198;
   longitude = -97.740489;
-  zoom: number;
+  zoom = 3.5;
   city: string;
   private geoCoder;
   selectedMessage: Message;
   previous;
-
+  travelDistance: number;
   selectedCity: boolean;
 
   @ViewChild('search')
@@ -47,16 +47,19 @@ export class GuestbookComponent implements OnInit {
             return;
           }
  
-          //set latitude, longitude
+          //set variables
           this.latitude = place.geometry.location.lat();
           this.longitude = place.geometry.location.lng();
+          this.zoom = 3.5;
           this.city = place.formatted_address;
+          this.selectedCity = false;
+          this.asTheCrowFlies(30.274198, -97.740489, this.latitude, this.longitude);
         });
       });
     });
 
     this.guestbookService.getMessages().then((messages: Message[]) => {
-      this.messages = messages.map((message) => {
+        this.messages = messages.map((message) => {
         return message;
       })
     })
@@ -73,6 +76,11 @@ export class GuestbookComponent implements OnInit {
   }
 
   createNewMessage() {
+    for (let check of this.messages) {
+      if (this.longitude === check.long) {
+        this.longitude = this.longitude + -0.001;
+      }
+    }
     var message: Message = {
       name:'',
       city: this.city,
@@ -94,6 +102,8 @@ export class GuestbookComponent implements OnInit {
     this.selectMessage(message);
     this.selectedMessage = null;
     this.selectedCity = null;
+    this.city = null;
+    this.travelDistance = null;
 
     return this.messages;
     this.guestbookService.getMessages().then((messages: Message[]) => {
@@ -123,7 +133,37 @@ export class GuestbookComponent implements OnInit {
   listClick(message) {
     this.latitude = message.lat;
     this.longitude = message.long;
-    this.zoom = 4;
+    this.zoom = 7;
     this.agmMap.triggerResize();
+  }
+
+  fullMap() {
+    console.log('click')
+    this.latitude = 30.274198;
+    this.longitude = -97.740489;
+    this.zoom = 3.5;
+    this.agmMap.triggerResize();
+  }
+
+  asTheCrowFlies(x1, y1, x2, y2) {
+    var travelDistance = 0;
+    const RADIANS: number = 180 / 3.14159265;
+    
+    if (x1 == x2 && y1 == y2) {
+      travelDistance = 0;
+    
+    } else {
+      // Calculating Distance between Points
+      var lt1 = x1 / RADIANS;
+      var lg1 = y1 / RADIANS;
+      var lt2 = x2 / RADIANS;
+      var lg2 = y2 / RADIANS;
+    
+      // radius of earth in miles (3,958.8) * position on surface of sphere
+      travelDistance = (3958.8) * Math.acos(Math.sin(lt1) * Math.sin(lt2) + Math.cos(lt1) * Math.cos(lt2) * Math.cos(lg2 - lg1));
+    }
+    this.travelDistance = travelDistance;
+    return travelDistance;
+
   }
 }

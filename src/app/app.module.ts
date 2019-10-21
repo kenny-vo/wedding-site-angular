@@ -30,6 +30,7 @@ import { KlFilterPipe } from './contacts/kl-filter.pipe';
 import { UsFilterPipe } from './contacts/us-filter.pipe';
 
 import { AgmCoreModule } from '@agm/core';
+import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
 
 @NgModule({
   declarations: [
@@ -62,8 +63,9 @@ import { AgmCoreModule } from '@agm/core';
     LightboxModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB3phgawKpT7S_0-vwzJQKbnTWA8UQWML8',
-      libraries: ['places']
-    })
+      libraries: ['places'],
+    }),
+    AgmJsMarkerClustererModule
   ],
   providers: [GuestbookService],
   bootstrap: [AppComponent]
